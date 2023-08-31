@@ -1,0 +1,38 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "index";
+    include template/_head.pug  
+
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_carousel.pug
+
+                include components/_points-section.pug
+
+
+
+                section.products
+                    .container
+                        h1 Novinky a akční ceny
+                        .products-grid
+                            include components/_product-card.pug
+                            include components/_product-card-unavailable.pug
+                            include components/_product-card-soon.pug
+                            include components/_product-card.pug
+
+
+                include components/_news-section.pug
+
+     
+
+            
+        include components/_footer.pug
+
+        include template/_scripts.pug  

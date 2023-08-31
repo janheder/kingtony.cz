@@ -1,0 +1,37 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "login-splashscreen-alt";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+        
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+                .container 
+                    .page.--narrow
+                        section.page-heading
+                            h1 Vyberte firmu
+                            p Jako obchodní zástupce můžete nakupovat za více firem, zvolte tu za kterou chcete nakupovat nyní 
+
+                        .splashscreen
+
+                            - for (var i=0; i<5; i++)
+                            
+                                a.splashscreen-item(href="#") 
+                                    .splashscreen-item-img
+                                        img(src="/img/icons/user.svg" alt="Petr Novák")
+                                    .splashscreen-item-text 
+                                        span Firma s.r.o.
+                                        small 
+                                            b IČO: 123467898
+                                            b DIČ: CZ16442425572
+                                    .btn.btn-secondary Zvolit firmu
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

@@ -1,0 +1,34 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "uzivatelsky-ucet";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+
+                .page.--narrow
+                    section.page-heading.--inline
+                        .container
+                            h1 Přihlášen jako: Petr Novák
+                            p V případě zájmu o změnu údajů, kontaktujte nás
+                            .logout-wrap 
+                                a.btn(href="#") Odhlásit se
+                    section.page-content
+                        .container 
+  
+
+
+                            h2 Fakturační údaje
+
+            
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

@@ -1,0 +1,38 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "produkt-vypis";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+
+        #wrapper
+            
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+                section.page-heading
+                    .container
+                        h1 Oblíbené produkty
+                        a.btn.btn-delete(href="#") Odstranit vše
+
+
+
+                section.products
+                    .container
+
+
+                        .products-grid
+                            
+                            - for (var i=0; i<9; i++)
+                                include components/_product-card.pug
+
+
+
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

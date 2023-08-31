@@ -1,0 +1,35 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "login-splashscreen";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+        
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+                .container 
+                    .page.--narrow
+                        section.page-heading
+                            h1 Kdo nakupuje
+                            p Pro toto firmu existuje více nákupčích, ze seznamu níže vyberte za koho chcete nakupovat 
+
+                        .splashscreen
+
+                            - for (var i=0; i<5; i++)
+                            
+                                a.splashscreen-item(href="#") 
+                                    .splashscreen-item-img
+                                        img(src="/img/icons/user.svg" alt="Petr Novák")
+                                    .splashscreen-item-text 
+                                        span Petr Novák 
+                                        small info@petrnovak.cz
+                                    .btn.btn-secondary Zvolit nákupčího
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

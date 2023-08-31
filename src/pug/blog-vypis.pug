@@ -1,0 +1,45 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "blog-vypis";
+    include template/_head.pug  
+
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+                .page
+                    section.page-heading
+                        .container
+                            .page-heading-inner
+                                h1 Co je u nás v kingtony nového
+                                p The foundations of an optimal ergonomic workspace include the chair and stool that support us all day long and complement our home office without compromising on aesthetics.
+                    
+                    section.page-content
+                        .container 
+                            .row
+                                .col-12.col-lg-4
+                                    include components/_news-single.pug
+                                .col-12.col-lg-4
+                                    include components/_news-single.pug
+                                .col-12.col-lg-4
+                                    include components/_news-single.pug
+                                .col-12.col-lg-4
+                                    include components/_news-single.pug
+                                .col-12.col-lg-4
+                                    include components/_news-single.pug
+                                .col-12.col-lg-4
+                                    include components/_news-single.pug
+                                .col-12.col-lg-4
+                                    include components/_news-single.pug
+
+                            include components/_pagination.pug
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

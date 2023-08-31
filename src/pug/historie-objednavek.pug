@@ -1,0 +1,87 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "uzivatelsky-ucet";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+
+                .page.--narrow
+                    section.page-heading.--inline
+                        .container
+                            h1 Přihlášen jako: Petr Novák
+                            p V případě zájmu o změnu údajů, kontaktujte nás
+                            .logout-wrap 
+                                a.btn(href="#") Odhlásit se
+                    section.page-content
+                        .container 
+  
+
+
+                            h2 Fakturační údaje
+
+            
+                            h2 Historie objednávek
+
+                            .order-history 
+                                table
+                                    thead 
+                                        th Číslo nákupu
+                                        th Datum 
+                                        th Cena 
+                                        th(colspan="2") Stav objednávky
+
+                            
+                                    tbody
+                                        tr.order-history__item(id="detail-1") 
+                                            td 1598879
+                                            td 1. 1. 1970
+                                            td 16 999 Kč
+                                            td.--finished Dokončeno
+                                            td #[a(href="#detail-1") Detail]
+
+                                            
+                                        tr.order-history__item-detail
+                                            td(colspan="2") 
+                                                span Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                                span Dřevěná bedna na 2 vína
+                                            td 
+                                                span 1 ks
+                                                span 2 ks
+                                            td
+                                                span Skladem
+                                                span Skladem
+                                            td 
+                                                span 5 999 Kč
+                                                span 2 299 Kč
+
+                    
+
+
+
+                            
+                                        tr.order-history__item(id="detail-2") 
+                                            td 1598879
+                                            td 1. 1. 1970
+                                            td 16 999 Kč
+                                            td.--finished Dokončeno
+                                            td #[a(href="#detail-2") Detail]
+
+                                            
+                                        tr.order-history__item-detail
+                                            td(colspan="2") Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                            td 1 ks
+                                            td Skladem
+                                            td 5 999 Kč
+
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

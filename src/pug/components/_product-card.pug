@@ -1,0 +1,52 @@
+.product-card 
+    .product-card__link
+
+        a.product-card__top(href="/produkt-detail.html")     
+
+            .product-card__thumb
+
+                .product-card__tags
+                    .product-card__tagSingle
+                        .tag.--sale Akce
+                    .product-card__tagSingle    
+                        .tag.--new Novinka
+                    .product-card__tagSingle 
+                        .tag.--recommended Doporučené
+                    .product-card__tagSingle 
+                        .tag.--top Top
+
+                .product-card__tagsRight
+                    .product-card__tagSingle 
+                        .tag.--circleSale -18%
+                    .product-card__tagSingle 
+                        .tag.--circle Doprodej
+                    .product-card__tagSingle 
+                        .tag.--free-delivery Doprava zdarma
+
+
+                .product-card__imgWrap
+                    img.product-card__img(src="/img/product-thumb-medium.jpg" alt=ProductName title=ProductName height="240" width="188" loading="lazy")
+
+            .product-card__title #{ProductName}
+
+
+        .product-card__bottom  
+            a.product-card__delivery(href="/produkt-detail.html")
+                img(src="/img/icons/check.svg" alt="Skladem")
+                .product-card__deliveryText Skladem 10 ks
+
+
+            a.product-card__price(href="/produkt-detail.html")
+                .product-card__priceOld 999 Kč
+                .product-card__priceMain 899 Kč
+            .product-card__priceAlt 450 Kč včetně DPH
+
+            form.product-card__cta(action="#" type="POST")
+                .product-card__qty.stepper(id="qty-stepper" ) 
+                    span.minus –
+                    input(id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required) 
+                    span.plus +
+                button.btn.product-card__btn #[img(src="/img/icons/cart-green.svg" alt="Do košíku")] Do košíku
+
+            .product-card__code Kód produktu: 1DH5G6
+            

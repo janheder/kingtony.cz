@@ -1,0 +1,111 @@
+.cart-heading{
+    background: $white;
+    padding: 30px 0;
+    box-shadow: inset 0px 15px 15px -12px rgba(0, 0, 0, 0.05);
+}
+.cart-heading .container{
+    display: flex;
+}
+.cart-heading__item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    border-right: 1px solid $gray-300;
+    gap: 10px
+}
+.cart-heading__item:last-child{
+    border-right: none;
+}
+.cart-heading__icon{
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D5D5D5;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    color: white;
+    font-weight: 500;
+}
+.cart-heading__icon img{
+    opacity: 0.6;
+}
+.cart-heading__title{
+    font-size: 15px;
+    color: $gray-500;
+    font-weight: 500;
+}
+
+
+
+.cart-heading__item.--active {
+    .cart-heading__icon{
+        background: $gray-900;
+        color: white;
+    }
+    .cart-heading__title{
+        color: $gray-900;
+    }
+}
+
+.cart-heading__item.--complete {
+    .cart-heading__icon{
+        background: $green-500;
+        color: white;
+    }
+
+    .cart-heading__title{
+        color: $gray-900;
+
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .cart-heading{
+        padding: 0;
+    }
+    .cart-heading .container{
+        padding: 0;
+    }
+    .cart-heading__item{
+        flex-direction: row;
+        padding: 10px 10px;
+        border: 0;
+        flex-grow: 0;
+        display: none;
+    }
+    .cart-heading__icon{
+        height: 40px;
+        width: 40px;
+    }
+    .cart-heading__icon img{
+        max-height: 22px;
+        max-width: 22px;
+    }
+    .cart-heading__title{
+        padding: 0;
+        padding-left: 20px;
+        display: none;
+    }
+    .cart-heading__item.--active{
+        display: flex;
+        flex-grow: 1;
+        .cart-heading__title{
+            display: flex;
+            white-space: nowrap;
+        }
+    }
+    .cart-heading__item.--complete {
+        .cart-heading__icon::after{
+            top: 20px;
+            right: 2px;
+        }
+    }
+
+}
