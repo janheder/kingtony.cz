@@ -591,233 +591,53 @@
                   </form>
                 </div>
               </div>
-              <div class="col-12 col-lg-7">
-                <div class="product-detail__description" id="productDescription">
-                  <h2>Popis produktu</h2>
-                  <p>Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního tlustého lana, která je praktická a snadno přepravitelná.</p>
-                  <p>Přírodní odstín. Perfektní předmět pro jedinečný dárek, zajímavý dekorativní motiv - vnese do vašeho domova přirozený ekologický nádech.</p>
-                  <p>Na přání je možné dokoupit dřevěnou vlnu (hobliny) a rytinu.</p>
+            </div>
+            <div class="tab product-detail__tab">
+              <button class="tablinks active" onclick="openCity(event, '1')">Popis a Parametry</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Dokumenty k produktu</button>
+            </div>
+            <div class="tabcontent product-detail__tabcontent" id="1" style="display: block;">
+              <div class="row">
+                <div class="col-12 col-lg-7">
+                  <div class="product-detail__description" id="productDescription">
+                    <h2>Popis produktu</h2>
+                    <p>Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního tlustého lana, která je praktická a snadno přepravitelná.</p>
+                    <p>Přírodní odstín. Perfektní předmět pro jedinečný dárek, zajímavý dekorativní motiv - vnese do vašeho domova přirozený ekologický nádech.</p>
+                    <p>Na přání je možné dokoupit dřevěnou vlnu (hobliny) a rytinu.</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-1"></div>
+                <div class="col-12 col-lg-4">
+                  <div class="product-detail__parameters">
+                    <h2>Parametry</h2>
+                    <table> 
+                      <tbody> 
+                        <tr>
+                          <td>Šířka</td>
+                          <td>15cm</td>
+                        </tr>
+                        <tr>
+                          <td>Výška</td>
+                          <td>150cm</td>
+                        </tr>
+                        <tr>
+                          <td>Hloubka</td>
+                          <td>Lorem ipsum dolore</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-1"></div>
-              <div class="col-12 col-lg-4">
-                <div class="product-detail__parameters">
-                  <h2>Parametry</h2>
-                  <table> 
-                    <tbody> 
-                      <tr>
-                        <td>Šířka</td>
-                        <td>15cm</td>
-                      </tr>
-                      <tr>
-                        <td>Výška</td>
-                        <td>150cm</td>
-                      </tr>
-                      <tr>
-                        <td>Hloubka</td>
-                        <td>Lorem ipsum dolore</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+            </div>
+            <div class="tabcontent product-detail__tabcontent" id="2" style="display: none;">
+              <div class="product-detail__files"><a href="#">soubor.pdf</a><a href="#">soubor.pdf</a><a href="#">soubor.pdf</a><a href="#">soubor.pdf</a></div>
             </div>
           </div>
         </section>
         <section class="products">
           <div class="container"> 
-            <h1>Příslušenství</h1>
-            <div class="products-grid">
-              <div class="product-card"> 
-                <div class="product-card__link"><a class="product-card__top" href="/produkt-detail.html">    
-                    <div class="product-card__thumb">
-                      <div class="product-card__tags">
-                        <div class="product-card__tagSingle">
-                          <div class="tag --sale">Akce</div>
-                        </div>
-                        <div class="product-card__tagSingle">   
-                          <div class="tag --new">Novinka</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --recommended">Doporučené</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --top">Top</div>
-                        </div>
-                      </div>
-                      <div class="product-card__tagsRight">
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circleSale">-18%</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circle">Doprodej</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --free-delivery">Doprava zdarma</div>
-                        </div>
-                      </div>
-                      <div class="product-card__imgWrap"><img class="product-card__img" src="/img/product-thumb-medium.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" height="240" width="188" loading="lazy"></div>
-                    </div>
-                    <div class="product-card__title">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</div></a>
-                  <div class="product-card__bottom"> <a class="product-card__delivery" href="/produkt-detail.html"><img src="/img/icons/check.svg" alt="Skladem">
-                      <div class="product-card__deliveryText">Skladem 10 ks</div></a><a class="product-card__price" href="/produkt-detail.html">
-                      <div class="product-card__priceOld">999 Kč</div>
-                      <div class="product-card__priceMain">899 Kč</div></a>
-                    <div class="product-card__priceAlt">450 Kč včetně DPH</div>
-                    <form class="product-card__cta" action="#" type="POST">
-                      <div class="product-card__qty stepper" id="qty-stepper"> <span class="minus">–</span>
-                        <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
-                      </div>
-                      <button class="btn product-card__btn"><img src="/img/icons/cart-green.svg" alt="Do košíku"> Do košíku</button>
-                    </form>
-                    <div class="product-card__code">Kód produktu: 1DH5G6</div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-card"> 
-                <div class="product-card__link"><a class="product-card__top" href="/produkt-detail.html">    
-                    <div class="product-card__thumb">
-                      <div class="product-card__tags">
-                        <div class="product-card__tagSingle">
-                          <div class="tag --sale">Akce</div>
-                        </div>
-                        <div class="product-card__tagSingle">   
-                          <div class="tag --new">Novinka</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --recommended">Doporučené</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --top">Top</div>
-                        </div>
-                      </div>
-                      <div class="product-card__tagsRight">
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circleSale">-18%</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circle">Doprodej</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --free-delivery">Doprava zdarma</div>
-                        </div>
-                      </div>
-                      <div class="product-card__imgWrap"><img class="product-card__img" src="/img/product-thumb-medium.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" height="240" width="188" loading="lazy"></div>
-                    </div>
-                    <div class="product-card__title">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</div></a>
-                  <div class="product-card__bottom"> <a class="product-card__delivery" href="/produkt-detail.html"><img src="/img/icons/check.svg" alt="Skladem">
-                      <div class="product-card__deliveryText">Skladem 10 ks</div></a><a class="product-card__price" href="/produkt-detail.html">
-                      <div class="product-card__priceOld">999 Kč</div>
-                      <div class="product-card__priceMain">899 Kč</div></a>
-                    <div class="product-card__priceAlt">450 Kč včetně DPH</div>
-                    <form class="product-card__cta" action="#" type="POST">
-                      <div class="product-card__qty stepper" id="qty-stepper"> <span class="minus">–</span>
-                        <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
-                      </div>
-                      <button class="btn product-card__btn"><img src="/img/icons/cart-green.svg" alt="Do košíku"> Do košíku</button>
-                    </form>
-                    <div class="product-card__code">Kód produktu: 1DH5G6</div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-card"> 
-                <div class="product-card__link"><a class="product-card__top" href="/produkt-detail.html">    
-                    <div class="product-card__thumb">
-                      <div class="product-card__tags">
-                        <div class="product-card__tagSingle">
-                          <div class="tag --sale">Akce</div>
-                        </div>
-                        <div class="product-card__tagSingle">   
-                          <div class="tag --new">Novinka</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --recommended">Doporučené</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --top">Top</div>
-                        </div>
-                      </div>
-                      <div class="product-card__tagsRight">
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circleSale">-18%</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circle">Doprodej</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --free-delivery">Doprava zdarma</div>
-                        </div>
-                      </div>
-                      <div class="product-card__imgWrap"><img class="product-card__img" src="/img/product-thumb-medium.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" height="240" width="188" loading="lazy"></div>
-                    </div>
-                    <div class="product-card__title">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</div></a>
-                  <div class="product-card__bottom"> <a class="product-card__delivery" href="/produkt-detail.html"><img src="/img/icons/check.svg" alt="Skladem">
-                      <div class="product-card__deliveryText">Skladem 10 ks</div></a><a class="product-card__price" href="/produkt-detail.html">
-                      <div class="product-card__priceOld">999 Kč</div>
-                      <div class="product-card__priceMain">899 Kč</div></a>
-                    <div class="product-card__priceAlt">450 Kč včetně DPH</div>
-                    <form class="product-card__cta" action="#" type="POST">
-                      <div class="product-card__qty stepper" id="qty-stepper"> <span class="minus">–</span>
-                        <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
-                      </div>
-                      <button class="btn product-card__btn"><img src="/img/icons/cart-green.svg" alt="Do košíku"> Do košíku</button>
-                    </form>
-                    <div class="product-card__code">Kód produktu: 1DH5G6</div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-card"> 
-                <div class="product-card__link"><a class="product-card__top" href="/produkt-detail.html">    
-                    <div class="product-card__thumb">
-                      <div class="product-card__tags">
-                        <div class="product-card__tagSingle">
-                          <div class="tag --sale">Akce</div>
-                        </div>
-                        <div class="product-card__tagSingle">   
-                          <div class="tag --new">Novinka</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --recommended">Doporučené</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --top">Top</div>
-                        </div>
-                      </div>
-                      <div class="product-card__tagsRight">
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circleSale">-18%</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --circle">Doprodej</div>
-                        </div>
-                        <div class="product-card__tagSingle"> 
-                          <div class="tag --free-delivery">Doprava zdarma</div>
-                        </div>
-                      </div>
-                      <div class="product-card__imgWrap"><img class="product-card__img" src="/img/product-thumb-medium.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY" height="240" width="188" loading="lazy"></div>
-                    </div>
-                    <div class="product-card__title">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</div></a>
-                  <div class="product-card__bottom"> <a class="product-card__delivery" href="/produkt-detail.html"><img src="/img/icons/check.svg" alt="Skladem">
-                      <div class="product-card__deliveryText">Skladem 10 ks</div></a><a class="product-card__price" href="/produkt-detail.html">
-                      <div class="product-card__priceOld">999 Kč</div>
-                      <div class="product-card__priceMain">899 Kč</div></a>
-                    <div class="product-card__priceAlt">450 Kč včetně DPH</div>
-                    <form class="product-card__cta" action="#" type="POST">
-                      <div class="product-card__qty stepper" id="qty-stepper"> <span class="minus">–</span>
-                        <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
-                      </div>
-                      <button class="btn product-card__btn"><img src="/img/icons/cart-green.svg" alt="Do košíku"> Do košíku</button>
-                    </form>
-                    <div class="product-card__code">Kód produktu: 1DH5G6</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="products">
-          <div class="container"> 
-            <h1>Související</h1>
+            <h1>Obdobné produkty</h1>
             <div class="products-grid">
               <div class="product-card"> 
                 <div class="product-card__link"><a class="product-card__top" href="/produkt-detail.html">    

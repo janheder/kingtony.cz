@@ -99,6 +99,23 @@ html(lang=lang)
 
                                 .cart-table__footer
 
+                                    .cart-table__footerSummary
+                                        .cart-table__footerSummary-row
+                                            span Cena bez DPH:
+                                            span 3 354 Kč
+                                        .cart-table__footerSummary-row
+                                            span Cena včetně DPH
+                                            span 3 354 Kč
+
+
+                                    .cart-table__footerSplit
+                                        .form-group.--checkbox
+                                            label(for="split-order") Chci rozdělit objednávku
+                                            input(type="checkbox" name="split-order" id="split-order")
+
+                                        p Ve Vašem košíku se nachází i položky, které nejsou momentálně skladem. 
+
+
 
                                     button.btn.--cart(name="nextstep" form="cart-form") Doprava a platba #[img(src="/img/icons/cheveron-white.svg" alt="Pokračovat")]
 
