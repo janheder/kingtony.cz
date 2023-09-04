@@ -1,0 +1,99 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "uzivatelsky-ucet";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+
+                .page.--narrow
+                    section.page-heading
+                
+                        h1 Historie objednávek
+
+                    section.page-content
+
+                        .order-history 
+                            table
+                                thead 
+                                    th Datum 
+                                    th Číslo nákupu
+                                    th Cena
+                                    th Stav
+                                    th Stav
+
+                        
+                                tbody
+                                    tr.order-history__item(id="detail-1") 
+                                        td 1. 1. 1970
+                                        td 1598879
+                                        td 16 999 Kč
+                                        td.--finished Dokončeno
+                                        td #[a(href="#detail-1") Detail]
+
+                                        
+                                    tr.order-history__item-detail
+                                        td(colspan="5") 
+                                            table 
+                                                tr
+                                                    td
+                                                        a(href="#") Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                                    td 
+                                                        span 3 ks
+                                                    td
+                                                        span 5 999 Kč
+                                                    td 
+                                                        span.--status 3/3 odesláno
+                                                tr
+                                                    td
+                                                        a(href="#") Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                                    td 
+                                                        span 3 ks
+                                                    td
+                                                        span 5 999 Kč
+                                                    td 
+                                                        span.--status 2/3 odesláno
+
+                
+
+                                    tr.order-history__item(id="detail-2") 
+                                        td 1. 1. 1970
+                                        td 1598879
+                                        td 16 999 Kč
+                                        td.--finished Dokončeno
+                                        td #[a(href="#detail-2") Detail]
+
+                                        
+                                    tr.order-history__item-detail
+                                        td(colspan="5") 
+                                            table 
+                                                tr
+                                                    td
+                                                        a(href="#") Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                                    td 
+                                                        span 3 ks
+                                                    td
+                                                        span 5 999 Kč
+                                                    td 
+                                                        span.--status 3/3 odesláno
+                                                tr
+                                                    td
+                                                        a(href="#") Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                                    td 
+                                                        span 3 ks
+                                                    td
+                                                        span 5 999 Kč
+                                                    td 
+                                                        span.--status 2/3 odesláno
+
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

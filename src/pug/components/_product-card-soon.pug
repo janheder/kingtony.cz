@@ -1,7 +1,7 @@
 .product-card 
     .product-card__link
 
-        a.product-card__top(href="/produkt-detail.html")       
+        a.product-card__top(href="/produkt-detail-wholesale.html")       
 
             .product-card__thumb
 
@@ -36,10 +36,14 @@
                 .product-card__deliveryText.--soon Do týdne
                 
 
-            a.product-card__price(href="/produkt-detail.html")   
-                .product-card__priceOld 999 Kč
-                .product-card__priceMain 899 Kč
-            .product-card__priceAlt 450 Kč včetně DPH
+            a.product-card__price.--alt(href="/produkt-detail.html")   
+                .product-card__priceAlt 
+                    span Doporučená cena bez DPH:
+                    span 899 Kč                
+                .product-card__priceMain 
+                    span Nákupní cena bez DPH:
+                    span 899 Kč
+
 
             form.product-card__cta(action="#" type="POST")
                 .product-card__qty.stepper(id="qty-stepper" ) 

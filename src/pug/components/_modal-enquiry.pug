@@ -1,0 +1,32 @@
+.modal.micromodal-slide(id="modal-enquiry")
+
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+
+
+    .modal__container(role="dialog" aria-modal="true" aria-labelledby="modal-enquiry-title")
+
+        .modal__content(id="modal-enquiry-content")
+
+            .modal__header
+                h2.modal__title(id="modal-enquiry-title") Poptávka
+
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
+
+
+            
+            form(method="post" id="enquiry-form")
+                .form-group 
+                    label(for="enquiry-name") Jméno a Příjmení
+                    input(type="text" id="enquiry-name" name="enquiry-name" required)
+                .form-group 
+                    label(for="enquiry-email") Email
+                    input(type="email" id="enquiry-email" name="enquiry-email" required)
+                .form-group 
+                    label(for="enquiry-text") Text poptávky
+                    textarea( id="enquiry-text" name="enquiry-text" rows="6" required)
+
+                .form-group 
+                    button.btn.--fullWidth(name="enquiry-submit" id="enquiry-submit") Odeslat poptávku #[img(src="/img/icons/cheveron-white.svg" alt="Přihlásit")]
+
+
+                

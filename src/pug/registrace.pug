@@ -20,6 +20,20 @@ html(lang=lang)
                             p Po odeslání registrace Vám bude neprodleně doručen na e-mailovou adresu uvedenou v registračním formuláři aktivační e-mail.
                         
                         form(method="post" id="register-form")
+
+                            .form-group     
+                                label(for="fakturacni_jmeno") Název firmy (nepovinné)
+                                input(type="text" id="fakturacni_jmeno" name="fakturacni_jmeno")
+
+                            .form-group     
+                                label(for="register-fa-ico") IČO (nepovinné)
+                                input(type="text" id="register-fa-ico" name="register-fa-ico")
+                                
+                            .form-group     
+                                label(for="dic") DIČ (nepovinné)
+                                input(type="text" id="dic" name="dic")
+
+
                             .form-group     
                                 label(for="register-name") Jméno
                                 input(type="text" id="register-name" name="register-name" required minlength="2" maxlength="45")
@@ -38,7 +52,7 @@ html(lang=lang)
                                 span.show-password(id="showRegisterPassword" aria-label="Zobrazit heslo")
                                 span.label-subtext (Minimum 8 znaků, musí obsahovat velké a malé písmena a alespoň 1 číslo)
 
-                            .form-subtitle Dodací údaje
+                            .form-subtitle Fakturační adresa
 
                             .form-group     
                                 label(for="register-street") Ulice
@@ -61,7 +75,7 @@ html(lang=lang)
                             .form-spacer 
 
                             .form-group.--checkbox
-                                label(for="register-fa-address" id="faToggle") Vyplnit fakturační adresu #[span (pokud je rozdílná od dodací adresy nebo nakupuji na firmu)]
+                                label(for="register-fa-address" id="faToggle") Vyplnit jinou dodací adresu 
                                 input(type="checkbox" name="register-fa-address" id="register-fa-address")
 
                                 .form-collapse
@@ -71,23 +85,6 @@ html(lang=lang)
                                         label(for="register-fa-name") Jméno a příjmení
                                         input(type="text" id="register-fa-name" name="register-fa-name")
 
-                                    .form-group.--checkbox
-                                        label(for="register-fa-company" id="faComToggle") Jsme firma a potřebujeme uvést také obchodní informace
-                                        input(type="checkbox" name="register-fa-company" id="register-fa-company")
-
-                                        .form-collapse
-
-                                            .form-group     
-                                                label(for="fakturacni_jmeno") Název firmy
-                                                input(type="text" id="fakturacni_jmeno" name="fakturacni_jmeno")
-
-                                            .form-group     
-                                                label(for="register-fa-ico") IČO
-                                                input(type="text" id="register-fa-ico" name="register-fa-ico")
-                                                
-                                            .form-group     
-                                                label(for="dic") DIČ
-                                                input(type="text" id="dic" name="dic")
 
 
                                     .form-group     
@@ -108,7 +105,19 @@ html(lang=lang)
                                             option(value="cz") Česká republika
                                             option(value="sk") Slovensko
 
+                            .form-spacer 
 
+                            .form-group.--radiogroup
+                                p Typ zákazníka 
+                                span
+                                    input(type="radio" id="velkoobchod" name="typ" value="velkoobchod")
+                                    label(for="velkoobchod") Velkoobchod
+                                span
+                                    input(type="radio" id="maloobchod" name="typ" value="maloobchod")
+                                    label(for="maloobchod") Maloobchod
+                                span
+                                    input(type="radio" id="koncovy" name="typ" value="koncovy")
+                                    label(for="koncovy") Koncový uživatel
 
                             .form-spacer 
 
@@ -118,7 +127,7 @@ html(lang=lang)
 
 
                             .form-group 
-                                button.btn.--fullWidth(name="register-submit" id="register-submit") Vytvořit účet #[img(src="/img/icons/cheveron-white.svg")]
+                                button.btn.--fullWidth(name="register-submit" id="register-submit") Odeslat ke schválení #[img(src="/img/icons/cheveron-white.svg")]
 
 
         

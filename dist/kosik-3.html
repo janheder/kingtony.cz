@@ -105,12 +105,6 @@
       </div>
     </div>
     <header>
-      <div class="header-top">
-        <div class="container"> 
-          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/img/icons/phone.svg" alt="+420 605 337"><span>+420 605 337 238 </span><small>(po–pá 7:30 – 14:30)</small></div>
-          <div class="header-top__links"><a href="/o-nakupu.html">Vše o nákupu</a><a href="/txt.html">Doprava</a><a href="/kontakty.html">Kontakty</a></div>
-        </div>
-      </div>
       <div class="header-main"> 
         <div class="container"> 
           <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="kingtony.cz" title="kingtony.cz" width="150" height="50"></a>
@@ -137,17 +131,17 @@
             </div>
           </div>
           <div id="searchToggle"><img src="/img/icons/search-big.svg" alt="Vyhledávání"></div>
-          <div class="header-nav">
+          <div class="header-nav"><a class="header-nav__link" href="#">O nás</a><a class="header-nav__link" href="#">Kontakty</a>
+            <div class="header-nav__dropdown" data-micromodal-trigger="modal-enquiry">Poptávka</div>
             <div class="user" data-micromodal-trigger="modal-login">
               <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
-              <div class="user__title">Přihlášení</div>
+              <div class="user__title"></div>
             </div>
             <!--   
             .user.--active(id="userToggle")
                 .user__icon
                     img(src="/img/icons/user.svg" alt="Přihlášení")
                 .user__wrap
-                    .user__text Přihlášen jako
                     .user__title Petr Novák
                 .user__dropdown(id="userDropdown")
                     a(href="/uzivatelsky-ucet.html") Uživatelský účet
@@ -216,136 +210,99 @@
           <div class="cart-container">
             <div class="cart-table">
               <form class="cart-content__form" method="post" id="cart-form-user">
-                <div class="cart-table__title">Vyplňte osobní údaje</div>
+                <div class="cart-table__title">Fakturační údaje</div>
+                <div class="cart-table-personal"></div>
+                <div class="cart-table__title">Doručovací údaje</div>
                 <div class="cart-table-personal">
-                  <div class="form-group">    
-                    <label for="cart-name">Jméno</label>
-                    <input type="text" id="cart-name" name="cart-name" required>
-                  </div>
-                  <div class="form-group">    
-                    <label for="cart-surname">Příjmení</label>
-                    <input type="text" id="cart-surname" name="cart-surname" required>
-                  </div>
-                  <div class="form-group">    
-                    <label for="cart-email">Email</label><input type="email" id="cart-email" name="cart-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})">
-                  </div>
-                  <div class="form-group">    
-                    <label for="cart-tel">Telefon</label><input type="tel" id="cart-tel" name="cart-tel" required value="" pattern="\d{1,15}">
-                  </div>
-                  <div class="form-subtitle">Dodací údaje</div>
-                  <div class="form-group">    
-                    <label for="cart-street">Ulice</label>
-                    <input type="text" id="cart-street" name="cart-street" required>
-                  </div>
-                  <div class="form-group">    
-                    <label for="cart-street-n">Číslo popisné</label>
-                    <input type="text" id="cart-street-n" name="cart-street-n" required>
-                  </div>
-                  <div class="form-group">    
-                    <label for="cart-city">Město/obec</label>
-                    <input type="text" id="cart-city" name="cart-city" required>
-                  </div>
-                  <div class="form-group">    
-                    <label for="cart-psc">PSČ</label>
-                    <input type="text" id="cart-psc" name="cart-psc" required>
-                  </div>
-                  <div class="form-group">    
-                    <label for="cart-state">Stát</label>
-                    <select name="cart-state" id="cart-state" required>  
-                      <option value="cz">Česká republika</option>
-                      <option value="sk">Slovensko</option>
-                    </select>
-                  </div>
-                  <div class="form-spacer"> </div>
-                  <div class="form-group --checkbox">
-                    <label for="cart-fa-address" id="faToggle">Vyplnit fakturační adresu <span>(pokud je rozdílná od dodací adresy nebo nakupuji na firmu)</span></label>
-                    <input type="checkbox" name="cart-fa-address" id="cart-fa-address">
-                    <div class="form-collapse">
-                      <div class="form-group">    
-                        <label for="cart-fa-name">Jméno a příjmení</label>
-                        <input type="text" id="cart-fa-name" name="cart-fa-name">
-                      </div>
-                      <div class="form-group --checkbox">
-                        <label for="cart-fa-company" id="faComToggle">Jsme firma a potřebujeme uvést také obchodní informace</label>
-                        <input type="checkbox" name="cart-fa-address" id="cart-fa-company">
-                        <div class="form-collapse">
-                          <div class="form-group">    
-                            <label for="fakturacni_jmeno">Název firmy</label>
-                            <input type="text" id="fakturacni_jmeno" name="fakturacni_jmeno">
-                          </div>
-                          <div class="form-group">    
-                            <label for="cart-fa-ico">IČO</label>
-                            <input type="text" id="cart-fa-ico" name="cart-fa-ico">
-                          </div>
-                          <div class="form-group">    
-                            <label for="dic">DIČ</label>
-                            <input type="text" id="dic" name="dic">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">    
-                        <label for="cart-fa-street">Ulice</label>
-                        <input type="text" id="cart-fa-street" name="cart-fa-street">
-                      </div>
-                      <div class="form-group">    
-                        <label for="cart-fa-street-n">Číslo popisné</label>
-                        <input type="text" id="cart-fa-street-n" name="cart-fa-street-n">
-                      </div>
-                      <div class="form-group">    
-                        <label for="cart-fa-city">Město/obec</label>
-                        <input type="text" id="cart-fa-city" name="cart-fa-city">
-                      </div>
-                      <div class="form-group">    
-                        <label for="cart-fa-psc">PSČ</label>
-                        <input type="text" id="cart-fa-psc" name="cart-fa-psc">
-                      </div>
-                      <div class="form-group">    
-                        <label for="cart-fa-state">Stát</label>
-                        <select name="cart-fa-state" id="cart-fa-state">  
-                          <option value="cz">Česká republika</option>
-                          <option value="sk">Slovensko</option>
-                        </select>
-                      </div>
+                  <form action="" method="post">
+                    <div class="form-group --inline"> 
+                      <select name="user-info" id="user-info">  
+                        <option value="cz">Adresa Česká republika</option>
+                        <option value="sk">Adresa Slovensko</option>
+                      </select>
+                      <button class="btn btn-secondary">Vypsat adresu</button>
                     </div>
-                  </div>
-                  <div class="form-spacer"> </div>
-                  <div class="form-group --checkbox">
-                    <label for="cart-register" id="regToggle">S těmito údaji se chci zaregistrovat</label>
-                    <input type="checkbox" name="cart-register" id="cart-register">
-                    <div class="form-collapse">
-                      <div class="form-group">    
-                        <label for="cart-register-password">Heslo </label><input type="password" id="cart-register-password" name="cart-register-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$" disabled><span class="show-password" id="showCartRegisterPassword" aria-label="Zobrazit heslo"></span><span class="label-subtext">(Minimum 8 znaků, musí obsahovat velké a malé písmena a alespoň 1 číslo)</span>
-                      </div>
+                    <div class="cart-table-address">
+                      <table> 
+                        <tr> 
+                          <td>Jméno</td>
+                          <td>test</td>
+                        </tr>
+                        <tr> 
+                          <td>Příjmení</td>
+                          <td>test</td>
+                        </tr>
+                        <tr> 
+                          <td>Jméno</td>
+                          <td>test     </td>
+                        </tr>
+                        <tr> 
+                          <td>Jméno</td>
+                          <td>test</td>
+                        </tr>
+                        <tr> 
+                          <td>Jméno</td>
+                          <td>test</td>
+                        </tr>
+                        <tr> 
+                          <td>Příjmení</td>
+                          <td>test</td>
+                        </tr>
+                        <tr> 
+                          <td>Jméno</td>
+                          <td>test     </td>
+                        </tr>
+                        <tr> 
+                          <td>Jméno</td>
+                          <td>test               </td>
+                        </tr>
+                      </table>
                     </div>
-                  </div>
-                  <div class="form-spacer"> </div>
-                  <div class="form-group">
-                    <label>Vložením údajů beru na vědomí <a data-micromodal-trigger="modal-personal">zpracování osobních údajů</a></label>
-                  </div>
-                  <div class="form-group --checkbox">
-                    <label for="register-agree1">Chci odebírat newsletter a souhlasím se <a data-micromodal-trigger="modal-personal">zpracováním osobních údajů</a> za účelem zasílání informací o novinkách a slevách.</label>
-                    <input type="checkbox" name="register-agree1" id="register-agree1">
-                  </div>
+                  </form>
                 </div>
-                <div class="cart-table__footer"><a class="cart-table__footer-link" href="/"> 
-                    <div class="cart-table__footer-icon"><img src="/img/icons/cheveron.svg" alt="Krok zpět"></div>
-                    <div class="cart-table__footer-text">Krok zpět</div></a></div>
               </form>
             </div>
             <aside class="cart-aside">
-              <div class="cart-aside__title">Shrnutí objednávky</div>
+              <div class="cart-aside__title">Rekapitulace objednávky</div>
               <div class="cart-aside__table"> 
-                <div class="cart-aside__row"> 
-                  <div class="cart-aside__table-th">Cena zboží</div>
-                  <div class="cart-aside__table-td">3 299 Kč</div>
+                <div class="cart-aside__item"> 
+                  <div class="cart-aside__item-img"> <img src="/img/product-thumb-large.jpg" alt="#"></div>
+                  <div class="cart-aside__item-content">  
+                    <div class="cart-aside__item-name">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</div>
+                    <div class="cart-aside__item-prices"> <span>Počet kusů: 1</span><span>1 118 Kč</span></div>
+                  </div>
                 </div>
-                <div class="cart-aside__row"> 
-                  <div class="cart-aside__table-th">Doprava a platba</div>
-                  <div class="cart-aside__table-td">Nevybráno</div>
+                <div class="cart-aside__item"> 
+                  <div class="cart-aside__item-img"> <img src="/img/product-thumb-large.jpg" alt="#"></div>
+                  <div class="cart-aside__item-content">  
+                    <div class="cart-aside__item-name">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</div>
+                    <div class="cart-aside__item-prices"> <span>Počet kusů: 1</span><span>1 118 Kč</span></div>
+                  </div>
                 </div>
-                <div class="cart-aside__row --main"> 
-                  <div class="cart-aside__table-th">Celková cena</div>
-                  <div class="cart-aside__table-td">3 354 Kč <small>2 830 Kč bez DPH</small></div>
+                <div class="cart-aside__weight">Celková hmotnost: 25 kg</div>
+                <div class="cart-aside__delivery">
+                  <div class="cart-aside__row"> 
+                    <div class="cart-aside__table-th">Cena zboží</div>
+                    <div class="cart-aside__table-td"><span id="goodsprice">32,99</span> Kč</div>
+                  </div>
+                  <div class="cart-aside__row"> 
+                    <div class="cart-aside__table-th">Doprava a platba</div>
+                    <div class="cart-aside__table-td"><span id="delprice">33,2</span> Kč</div>
+                  </div>
+                </div>
+                <div class="cart-aside__row --main">
+                  <div class="cart-aside__table-row"> 
+                    <div class="cart-aside__table-th">Celkem bez DPH</div>
+                    <div class="cart-aside__table-td"> 
+                      <div><span id="sumprice">329,9</span> Kč </div>
+                    </div>
+                  </div>
+                  <div class="cart-aside__table-row"> 
+                    <div class="cart-aside__table-th">Cena včetně DPH</div>
+                    <div class="cart-aside__table-td"> 
+                      <div><span id="vatsumprice">329,9</span> Kč </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="cart-aside__free-shipping">Nakupte ještě za 6 237 Kč a máte dopravu zdarma</div>

@@ -1,0 +1,66 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "uzivatelsky-ucet";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+
+                .page.--narrow
+                    section.page-heading
+                
+                        h1 Naposledy zakoupené produkty
+
+                    section.page-content
+
+                        .product-history 
+                            .product-history__item
+                                .product-history__heading 
+                                    h5 Objednávka: 452465761 #[span Vytvořená: 23.2.2013]
+                                    p Externí číslo objednávky: 14679275
+                                .product-history__product
+                                    img(src="/img/product-thumb-large.jpg" alt="#")
+                                    .product-history__name 
+                                        span 2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum
+                                        span kod_produktu_1233
+                                    .product-history__qty 3 ks 
+                                    a.btn.btn-secondary.product-history__btn(href="#") Koupit znovu
+                                .product-history__product
+                                    img(src="/img/product-thumb-large.jpg" alt="#")
+                                    .product-history__name 
+                                        span 2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum
+                                        span kod_produktu_1233
+                                    .product-history__qty 3 ks 
+                                    a.btn.btn-secondary.product-history__btn(href="#") Koupit znovu
+
+                            .product-history__item
+                                .product-history__heading 
+                                    h5 Objednávka: 452465761 #[span Vytvořená: 23.2.2013]
+                                    p Externí číslo objednávky: 14679275
+                                .product-history__product
+                                    img(src="/img/product-thumb-large.jpg" alt="#")
+                                    .product-history__name 
+                                        span 2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum
+                                        span kod_produktu_1233
+                                    .product-history__qty 3 ks 
+                                    a.btn.btn-secondary.product-history__btn(href="#") Koupit znovu
+                                .product-history__product
+                                    img(src="/img/product-thumb-large.jpg" alt="#")
+                                    .product-history__name 
+                                        span 2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum
+                                        span kod_produktu_1233
+                                    .product-history__qty 3 ks 
+                                    a.btn.btn-secondary.product-history__btn(href="#") Koupit znovu
+
+                            p.notice Seznam odebraných položek je aktuální k předešlému dni a 1 kalendářní rok zpětně.
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

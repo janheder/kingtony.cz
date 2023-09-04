@@ -11,7 +11,7 @@
     <meta content="Eline.cz" name="author">
     <link rel="preload" href="/fonts/CerebriSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/CerebriSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="canonical" href="https://kingtony.pages.dev/zapomenute-heslo">
+    <link rel="canonical" href="https://kingtony.pages.dev/uzivatelsky-ucet">
     <meta property="og:locale" content="cs_CZ">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Kingtony.cz">
@@ -85,12 +85,6 @@
       </div>
     </div>
     <header>
-      <div class="header-top">
-        <div class="container"> 
-          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/img/icons/phone.svg" alt="+420 605 337"><span>+420 605 337 238 </span><small>(po–pá 7:30 – 14:30)</small></div>
-          <div class="header-top__links"><a href="/o-nakupu.html">Vše o nákupu</a><a href="/txt.html">Doprava</a><a href="/kontakty.html">Kontakty</a></div>
-        </div>
-      </div>
       <div class="header-main"> 
         <div class="container"> 
           <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="kingtony.cz" title="kingtony.cz" width="150" height="50"></a>
@@ -117,17 +111,17 @@
             </div>
           </div>
           <div id="searchToggle"><img src="/img/icons/search-big.svg" alt="Vyhledávání"></div>
-          <div class="header-nav">
+          <div class="header-nav"><a class="header-nav__link" href="#">O nás</a><a class="header-nav__link" href="#">Kontakty</a>
+            <div class="header-nav__dropdown" data-micromodal-trigger="modal-enquiry">Poptávka</div>
             <div class="user" data-micromodal-trigger="modal-login">
               <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
-              <div class="user__title">Přihlášení</div>
+              <div class="user__title"></div>
             </div>
             <!--   
             .user.--active(id="userToggle")
                 .user__icon
                     img(src="/img/icons/user.svg" alt="Přihlášení")
                 .user__wrap
-                    .user__text Přihlášen jako
                     .user__title Petr Novák
                 .user__dropdown(id="userDropdown")
                     a(href="/uzivatelsky-ucet.html") Uživatelský účet
@@ -174,8 +168,8 @@
       <nav id="mainNav">
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Akční nabídka</a></div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Dílenský nábytek a vozíky</a></div>
-        <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-0">Hlavice, ráčny a příslušenství pro ruční použití <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+        <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
+          <div class="nav-link" id="subToggle-0"><img src="/img/nav-img.svg" alt="..."> Hlavice, ráčny a příslušenství pro ruční použití <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-0">
             <div class="nav-submenu__single --all"><a class="nav-submenu__title" href="/produkt-vypis.html">Zobrazit vše</a></div>
             <div class="container">
@@ -264,8 +258,8 @@
             </div>
           </div>
         </div>
-        <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství</span><img src="/img/icons/cheveron.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-1">Hlavice a příslušenství pro rázové utahováky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+        <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství</span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
+          <div class="nav-link" id="subToggle-1"><img src="/img/nav-img.svg" alt="..."> Hlavice a příslušenství pro rázové utahováky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-1">
             <div class="container">
               <div class="row"> 
@@ -355,8 +349,8 @@
         </div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Šuplíky</a></div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Komody</a></div>
-        <div class="nav-item expandable"> <a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-2">Noční stolky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+        <div class="nav-item expandable"> <a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
+          <div class="nav-link" id="subToggle-2"><img src="/img/nav-img.svg" alt="..."> Noční stolky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-2">
             <div class="container">
               <div class="row"> 
@@ -444,8 +438,8 @@
             </div>
           </div>
         </div>
-        <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-3">Dřevěné krabičky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+        <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
+          <div class="nav-link" id="subToggle-3"><img src="/img/nav-img.svg" alt="..."> Dřevěné krabičky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-3">
             <div class="container">
               <div class="row"> 
@@ -490,30 +484,89 @@
         <div class="breadcrumbs">
           <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">Dřevěné boxy</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">Dřevěná bedna na 2 vína CARMEN VI</span></div>
         </div>
-        <div class="container"> 
-          <div class="page --narrow">
-            <section class="page-heading">
-              <h1>Kdo nakupuje</h1>
-              <p>Pro toto firmu existuje více nákupčích, ze seznamu níže vyberte za koho chcete nakupovat </p>
-            </section>
-            <div class="splashscreen"><a class="splashscreen-item" href="#"> 
-                <div class="splashscreen-item-img"><img src="/img/icons/user.svg" alt="Petr Novák"></div>
-                <div class="splashscreen-item-text"> <span>Petr Novák </span><small>info@petrnovak.cz</small></div>
-                <div class="btn btn-secondary">Zvolit nákupčího</div></a><a class="splashscreen-item" href="#"> 
-                <div class="splashscreen-item-img"><img src="/img/icons/user.svg" alt="Petr Novák"></div>
-                <div class="splashscreen-item-text"> <span>Petr Novák </span><small>info@petrnovak.cz</small></div>
-                <div class="btn btn-secondary">Zvolit nákupčího</div></a><a class="splashscreen-item" href="#"> 
-                <div class="splashscreen-item-img"><img src="/img/icons/user.svg" alt="Petr Novák"></div>
-                <div class="splashscreen-item-text"> <span>Petr Novák </span><small>info@petrnovak.cz</small></div>
-                <div class="btn btn-secondary">Zvolit nákupčího</div></a><a class="splashscreen-item" href="#"> 
-                <div class="splashscreen-item-img"><img src="/img/icons/user.svg" alt="Petr Novák"></div>
-                <div class="splashscreen-item-text"> <span>Petr Novák </span><small>info@petrnovak.cz</small></div>
-                <div class="btn btn-secondary">Zvolit nákupčího</div></a><a class="splashscreen-item" href="#"> 
-                <div class="splashscreen-item-img"><img src="/img/icons/user.svg" alt="Petr Novák"></div>
-                <div class="splashscreen-item-text"> <span>Petr Novák </span><small>info@petrnovak.cz</small></div>
-                <div class="btn btn-secondary">Zvolit nákupčího</div></a>
+        <div class="page">
+          <section class="page-heading">
+            <div class="container"> 
+              <h1>Přehled dokumentů</h1>
             </div>
-          </div>
+          </section>
+          <section class="page-content">
+            <div class="container"> 
+              <div class="tab">
+                <button class="tablinks active" onclick="openCity(event, '1')">Vydané Faktury</button>
+                <button class="tablinks" onclick="openCity(event, '2')">Objednávky </button>
+                <button class="tablinks" onclick="openCity(event, '3')">Zálohové listy</button>
+                <button class="tablinks" onclick="openCity(event, '4')">Vratky/Dobropisy</button>
+                <button class="tablinks" onclick="openCity(event, '5')">Reklamace</button>
+              </div>
+              <div class="tabcontent" id="1" style="display: block;">
+                <div class="user-files-table"> 
+                  <table> 
+                    <tr>
+                      <th>Číslo FV </th>
+                      <th>Externí číslo</th>
+                      <th>Datum vystavení</th>
+                      <th>Datum splatnost</th>
+                      <th>Částka bez DPH</th>
+                      <th>Zbývá k úhradě</th>
+                      <th>Datum úhrady</th>
+                      <th>Dnů po splatnosti</th>
+                      <th>Stav faktury</th>
+                    </tr>
+                    <tr> 
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>test</td>
+                      <td class="--bold">test</td>
+                      <td class="--red">test                                           </td>
+                    </tr>
+                    <tr> 
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>test</td>
+                      <td class="--bold">test</td>
+                      <td class="--red">test    </td>
+                    </tr>
+                    <tr> 
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>test</td>
+                      <td class="--bold">test</td>
+                      <td class="--red">test        </td>
+                    </tr>
+                    <tr> 
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>Jméno</td>
+                      <td>test</td>
+                      <td>test</td>
+                      <td class="--bold">test</td>
+                      <td class="--red">test     </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="user-files-table-footer"><span>Celkem za období: <strong>56 900 Kč</strong></span><span>Po splatnosti: <strong>1 500 Kč</strong></span></div>
+              </div>
+              <div class="tabcontent" id="2" style="display: none;"></div>
+              <div class="tabcontent" id="3" style="display: none;"></div>
+              <div class="tabcontent" id="4" style="display: none;"></div>
+              <div class="tabcontent" id="5" style="display: none;"></div>
+            </div>
+          </section>
         </div>
       </main>
     </div>

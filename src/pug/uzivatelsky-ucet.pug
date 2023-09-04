@@ -13,22 +13,94 @@ html(lang=lang)
                 include components/_breadcrumbs.pug
 
                 .page.--narrow
-                    section.page-heading.--inline
-                        .container
-                            h1 Přihlášen jako: Petr Novák
-                            p V případě zájmu o změnu údajů, kontaktujte nás
-                            .logout-wrap 
-                                a.btn(href="#") Odhlásit se
+                    section.page-heading
+                
+                        h1 Uživatelský účet
+                        p V případě zájmu o změnu údajů, kontaktujte nás
+                        
                     section.page-content
-                        .container 
-  
+                        .user-info-section
+                            h3 Fakturační údaje
+                            .user-info-table 
+                                table 
+                                    tr 
+                                        td Jméno
+                                        td test
+                                    tr 
+                                        td Příjmení
+                                        td test
+                                    tr 
+                                        td Jméno
+                                        td test     
+                                    tr 
+                                        td Jméno
+                                        td test
+
+                        .user-info-section
+                            h3 Doručovací adresy
+                            form(action="" method="post")
+                                .form-group.--inline  
+                                    select(name="user-info" id="user-info")   
+                                        option(value="cz") Adresa Česká republika
+                                        option(value="sk") Adresa Slovensko
+                                    button.btn.btn-secondary Vypsat adresu
+
+                                .user-info-table 
+                                    table 
+                                        tr 
+                                            td Jméno
+                                            td test
+                                        tr 
+                                            td Příjmení
+                                            td test
+                                        tr 
+                                            td Jméno
+                                            td test     
+                                        tr 
+                                            td Jméno
+                                            td test
+                                    
+
+                        .user-info-section
+                            h3 Obchodní zástupce
+                            .user-info-usergrid 
+                                .usergrid-item 
+                                    .usergrid-item-img
+                                        img(src="/img/icons/user.svg" alt="Petr Novák")
+                                    .usergrid-item-text 
+                                        span Petr Novák 
+                                        small info@petrnovak.cz
 
 
-                            h2 Fakturační údaje
+                        .user-info-section
+                            h3 Nákupčí
+                            .user-info-usergrid 
+                                .usergrid-item 
+                                    .usergrid-item-img
+                                        img(src="/img/icons/user.svg" alt="Petr Novák")
+                                    .usergrid-item-text 
+                                        span Petr Novák 
+                                        small info@petrnovak.cz
+                                .usergrid-item 
+                                    .usergrid-item-img
+                                        img(src="/img/icons/user.svg" alt="Petr Novák")
+                                    .usergrid-item-text 
+                                        span Petr Novák 
+                                        small info@petrnovak.cz
+                                .usergrid-item 
+                                    .usergrid-item-img
+                                        img(src="/img/icons/user.svg" alt="Petr Novák")
+                                    .usergrid-item-text 
+                                        span Petr Novák 
+                                        small info@petrnovak.cz
+                                .usergrid-item 
+                                    .usergrid-item-img
+                                        img(src="/img/icons/user.svg" alt="Petr Novák")
+                                    .usergrid-item-text 
+                                        span Petr Novák 
+                                        small info@petrnovak.cz
 
-            
 
-        
         include components/_footer.pug
 
         include template/_scripts.pug  

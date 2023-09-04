@@ -84,13 +84,36 @@
         </div>
       </div>
     </div>
-    <header>
-      <div class="header-top">
-        <div class="container"> 
-          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/img/icons/phone.svg" alt="+420 605 337"><span>+420 605 337 238 </span><small>(po–pá 7:30 – 14:30)</small></div>
-          <div class="header-top__links"><a href="/o-nakupu.html">Vše o nákupu</a><a href="/txt.html">Doprava</a><a href="/kontakty.html">Kontakty</a></div>
+    <div class="modal micromodal-slide" id="modal-enquiry">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-enquiry-title">
+          <div class="modal__content" id="modal-enquiry-content">
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-enquiry-title">Poptávka</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <form method="post" id="enquiry-form">
+              <div class="form-group"> 
+                <label for="enquiry-name">Jméno a Příjmení</label>
+                <input type="text" id="enquiry-name" name="enquiry-name" required>
+              </div>
+              <div class="form-group"> 
+                <label for="enquiry-email">Email</label>
+                <input type="email" id="enquiry-email" name="enquiry-email" required>
+              </div>
+              <div class="form-group"> 
+                <label for="enquiry-text">Text poptávky</label>
+                <textarea id="enquiry-text" name="enquiry-text" rows="6" required></textarea>
+              </div>
+              <div class="form-group"> 
+                <button class="btn --fullWidth" name="enquiry-submit" id="enquiry-submit">Odeslat poptávku <img src="/img/icons/cheveron-white.svg" alt="Přihlásit"></button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+    </div>
+    <header>
       <div class="header-main"> 
         <div class="container"> 
           <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="kingtony.cz" title="kingtony.cz" width="150" height="50"></a>
@@ -117,17 +140,17 @@
             </div>
           </div>
           <div id="searchToggle"><img src="/img/icons/search-big.svg" alt="Vyhledávání"></div>
-          <div class="header-nav">
+          <div class="header-nav"><a class="header-nav__link" href="#">O nás</a><a class="header-nav__link" href="#">Kontakty</a>
+            <div class="header-nav__dropdown" data-micromodal-trigger="modal-enquiry">Poptávka</div>
             <div class="user" data-micromodal-trigger="modal-login">
               <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
-              <div class="user__title">Přihlášení</div>
+              <div class="user__title"></div>
             </div>
             <!--   
             .user.--active(id="userToggle")
                 .user__icon
                     img(src="/img/icons/user.svg" alt="Přihlášení")
                 .user__wrap
-                    .user__text Přihlášen jako
                     .user__title Petr Novák
                 .user__dropdown(id="userDropdown")
                     a(href="/uzivatelsky-ucet.html") Uživatelský účet
@@ -175,7 +198,7 @@
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Akční nabídka</a></div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Dílenský nábytek a vozíky</a></div>
         <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-0">Hlavice, ráčny a příslušenství pro ruční použití <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+          <div class="nav-link" id="subToggle-0"><img src="/img/nav-img.svg" alt="..."> Hlavice, ráčny a příslušenství pro ruční použití <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-0">
             <div class="nav-submenu__single --all"><a class="nav-submenu__title" href="/produkt-vypis.html">Zobrazit vše</a></div>
             <div class="container">
@@ -265,7 +288,7 @@
           </div>
         </div>
         <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství</span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-1">Hlavice a příslušenství pro rázové utahováky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+          <div class="nav-link" id="subToggle-1"><img src="/img/nav-img.svg" alt="..."> Hlavice a příslušenství pro rázové utahováky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-1">
             <div class="container">
               <div class="row"> 
@@ -356,7 +379,7 @@
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Šuplíky</a></div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html"><img src="/img/nav-img.svg" alt="..."> Komody</a></div>
         <div class="nav-item expandable"> <a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-2">Noční stolky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+          <div class="nav-link" id="subToggle-2"><img src="/img/nav-img.svg" alt="..."> Noční stolky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-2">
             <div class="container">
               <div class="row"> 
@@ -445,7 +468,7 @@
           </div>
         </div>
         <div class="nav-item expandable"><a class="nav-linkDesktop" href="produkt-vypis.html"> <img src="/img/nav-img.svg" alt="..."><span>Hlavice, ráčny a příslušenství pro ruční použití </span><img src="/img/icons/cheveron-right.svg" alt="Rozbalit"></a>
-          <div class="nav-link" id="subToggle-3">Dřevěné krabičky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
+          <div class="nav-link" id="subToggle-3"><img src="/img/nav-img.svg" alt="..."> Dřevěné krabičky <img src="/img/icons/cheveron.svg" alt="Rozbalit"></div>
           <div class="nav-submenu" id="sub-3">
             <div class="container">
               <div class="row"> 
@@ -627,7 +650,7 @@
                 </div>
               </div>
               <div class="product-card"> 
-                <div class="product-card__link"><a class="product-card__top" href="/produkt-detail.html">      
+                <div class="product-card__link"><a class="product-card__top" href="/produkt-detail-wholesale.html">      
                     <div class="product-card__thumb">
                       <div class="product-card__tags">
                         <div class="product-card__tagSingle">
@@ -658,10 +681,9 @@
                     </div>
                     <div class="product-card__title">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</div></a>
                   <div class="product-card__bottom"><a class="product-card__delivery" href="/produkt-detail.html">  <img src="/img/icons/time.svg" alt="Není skladem">
-                      <div class="product-card__deliveryText --soon">Do týdne</div></a><a class="product-card__price" href="/produkt-detail.html">  
-                      <div class="product-card__priceOld">999 Kč</div>
-                      <div class="product-card__priceMain">899 Kč</div></a>
-                    <div class="product-card__priceAlt">450 Kč včetně DPH</div>
+                      <div class="product-card__deliveryText --soon">Do týdne</div></a><a class="product-card__price --alt" href="/produkt-detail.html">  
+                      <div class="product-card__priceAlt"> <span>Doporučená cena bez DPH:</span><span>899 Kč                </span></div>
+                      <div class="product-card__priceMain"> <span>Nákupní cena bez DPH:</span><span>899 Kč</span></div></a>
                     <form class="product-card__cta" action="#" type="POST">
                       <div class="product-card__qty stepper" id="qty-stepper"> <span class="minus">-</span>
                         <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>

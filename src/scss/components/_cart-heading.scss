@@ -90,12 +90,12 @@
     }
     .cart-heading__title{
         padding: 0;
-        padding-left: 20px;
         display: none;
     }
     .cart-heading__item.--active{
         display: flex;
         flex-grow: 1;
+        
         .cart-heading__title{
             display: flex;
             white-space: nowrap;

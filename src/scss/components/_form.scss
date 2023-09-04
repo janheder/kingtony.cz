@@ -3,7 +3,7 @@ form{
 }
 
 input, select{
-    height: 54px;
+    height: 50px;
     padding: 0 20px;
     display: flex;
     border: 1px solid $gray-300;
@@ -49,6 +49,12 @@ button{
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+}
+.form-group.--inline{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    width: 100%;
 }
 .form-group label{
     padding-bottom: 2px;
@@ -146,6 +152,9 @@ button{
 .form-group.--checkbox > input:checked + .form-collapse{
     display: flex;
     flex-direction: column;
+    background: $gray-100;
+    margin-top: 20px;
+    padding: 15px;
 }
 
 @media screen and (max-width: 575px){

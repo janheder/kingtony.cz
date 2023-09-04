@@ -85,12 +85,6 @@
       </div>
     </div>
     <header>
-      <div class="header-top">
-        <div class="container"> 
-          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/img/icons/phone.svg" alt="+420 605 337"><span>+420 605 337 238 </span><small>(po–pá 7:30 – 14:30)</small></div>
-          <div class="header-top__links"><a href="/o-nakupu.html">Vše o nákupu</a><a href="/txt.html">Doprava</a><a href="/kontakty.html">Kontakty</a></div>
-        </div>
-      </div>
       <div class="header-main"> 
         <div class="container"> 
           <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="kingtony.cz" title="kingtony.cz" width="150" height="50"></a>
@@ -117,17 +111,17 @@
             </div>
           </div>
           <div id="searchToggle"><img src="/img/icons/search-big.svg" alt="Vyhledávání"></div>
-          <div class="header-nav">
+          <div class="header-nav"><a class="header-nav__link" href="#">O nás</a><a class="header-nav__link" href="#">Kontakty</a>
+            <div class="header-nav__dropdown" data-micromodal-trigger="modal-enquiry">Poptávka</div>
             <div class="user" data-micromodal-trigger="modal-login">
               <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
-              <div class="user__title">Přihlášení</div>
+              <div class="user__title"></div>
             </div>
             <!--   
             .user.--active(id="userToggle")
                 .user__icon
                     img(src="/img/icons/user.svg" alt="Přihlášení")
                 .user__wrap
-                    .user__text Přihlášen jako
                     .user__title Petr Novák
                 .user__dropdown(id="userDropdown")
                     a(href="/uzivatelsky-ucet.html") Uživatelský účet
@@ -250,112 +244,120 @@
                     </tr>
                   </tbody>
                 </table>
-                <table class="cart-summary__table">
-                  <thead> 
-                    <tr> 
-                      <th>Osobní údaje</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Jméno</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>Příjmení</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>Telefon</td>
-                      <td>123 456 789</td>
-                    </tr>
-                    <tr> 
-                      <td>E-mail</td>
-                      <td>test@test.cz</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="cart-summary__table">
-                  <thead> 
-                    <tr>
-                      <th>Dodací adresa</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Jméno</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>Příjmení</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>Ulice, č. p.</td>
-                      <td>test 123</td>
-                    </tr>
-                    <tr> 
-                      <td>Město</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>PSČ</td>
-                      <td>190 00</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="cart-summary__table">
-                  <thead> 
-                    <tr>
-                      <th>Fakturační adresa</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Název firmy</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>IČO</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>DIČ</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>Ulice, č. p.</td>
-                      <td>test 123</td>
-                    </tr>
-                    <tr> 
-                      <td>Město</td>
-                      <td>test</td>
-                    </tr>
-                    <tr> 
-                      <td>PSČ</td>
-                      <td>190 00</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="form-group">    
-                  <label for="order-ordernum">Zákaznické číslo objednávky</label>
-                  <input type="text" id="order-ordernum" name="order-ordernum" required>
+                <div class="cart-summary__table">
+                  <table>
+                    <thead> 
+                      <tr> 
+                        <th>Osobní údaje</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>Jméno</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>Příjmení</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>Telefon</td>
+                        <td>123 456 789</td>
+                      </tr>
+                      <tr> 
+                        <td>E-mail</td>
+                        <td>test@test.cz</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="form-group">    
-                  <label for="order-text">Poznámka k objednávce</label>
-                  <textarea type="text" id="order-text" name="order-text" rows="4"></textarea>
+                <div class="cart-summary__table">
+                  <table>
+                    <thead> 
+                      <tr>
+                        <th>Dodací adresa</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>Jméno</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>Příjmení</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>Ulice, č. p.</td>
+                        <td>test 123</td>
+                      </tr>
+                      <tr> 
+                        <td>Město</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>PSČ</td>
+                        <td>190 00</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="form-group --checkbox">
-                  <label for="order-agree2">Souhlasím s <a href="#">obchodními podmínkami</a></label>
-                  <input type="checkbox" name="order-agree2" id="order-agree2">
+                <div class="cart-summary__table">
+                  <table>
+                    <thead> 
+                      <tr>
+                        <th>Fakturační adresa</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>Název firmy</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>IČO</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>DIČ</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>Ulice, č. p.</td>
+                        <td>test 123</td>
+                      </tr>
+                      <tr> 
+                        <td>Město</td>
+                        <td>test</td>
+                      </tr>
+                      <tr> 
+                        <td>PSČ</td>
+                        <td>190 00</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <button class="btn --cart" name="finish-order">Odeslat objednávku</button>
-                <div class="cart-table__footer"><a class="cart-table__footer-link" href="/"> 
-                    <div class="cart-table__footer-icon"><img src="/img/icons/cheveron.svg" alt="Krok zpět"></div>
-                    <div class="cart-table__footer-text">Krok zpět</div></a></div>
+                <div class="cart-summary__footer">
+                  <div class="form-group">    
+                    <label for="order-ordernum">Zákaznické číslo objednávky</label>
+                    <input type="text" id="order-ordernum" name="order-ordernum" required>
+                  </div>
+                  <div class="form-group">    
+                    <label for="order-text">Poznámka k objednávce</label>
+                    <textarea type="text" id="order-text" name="order-text" rows="4"></textarea>
+                  </div>
+                  <div class="form-group --checkbox">
+                    <label for="order-agree2">Souhlasím s <a href="#">obchodními podmínkami</a></label>
+                    <input type="checkbox" name="order-agree2" id="order-agree2">
+                  </div>
+                  <button class="btn --cart" name="finish-order">Odeslat objednávku</button>
+                  <div class="cart-table__footer"><a class="cart-table__footer-link" href="/"> 
+                      <div class="cart-table__footer-icon"><img src="/img/icons/cheveron.svg" alt="Krok zpět"></div>
+                      <div class="cart-table__footer-text">Krok zpět</div></a></div>
+                </div>
               </form>
             </div>
           </div>

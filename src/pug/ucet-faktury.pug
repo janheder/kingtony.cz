@@ -1,0 +1,104 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "uzivatelsky-ucet";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+
+                .page
+                    section.page-heading
+                        .container 
+                            h1 Přehled dokumentů
+
+                    section.page-content
+                        .container 
+
+
+                            .tab
+                                button.tablinks.active(onclick="openCity(event, '1')") Vydané Faktury
+                                button.tablinks(onclick="openCity(event, '2')") Objednávky 
+                                button.tablinks(onclick="openCity(event, '3')") Zálohové listy
+                                button.tablinks(onclick="openCity(event, '4')") Vratky/Dobropisy
+                                button.tablinks(onclick="openCity(event, '5')") Reklamace
+
+
+                            .tabcontent(id="1" style="display: block;")
+
+                                .user-files-table 
+                                    table 
+                                        tr
+                                            th Číslo FV 
+                                            th Externí číslo
+                                            th Datum vystavení
+                                            th Datum splatnost
+                                            th Částka bez DPH
+                                            th Zbývá k úhradě
+                                            th Datum úhrady
+                                            th Dnů po splatnosti
+                                            th Stav faktury
+                                        tr 
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td test
+                                            td.--bold test
+                                            td.--red test                                           
+                                        tr 
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td test
+                                            td.--bold test
+                                            td.--red test    
+                                        tr 
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td test
+                                            td.--bold test
+                                            td.--red test        
+                                        tr 
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td Jméno
+                                            td test
+                                            td test
+                                            td.--bold test
+                                            td.--red test     
+
+                                .user-files-table-footer
+                                    span Celkem za období: #[strong 56 900 Kč]
+                                    span Po splatnosti: #[strong 1 500 Kč]
+
+
+
+
+                            .tabcontent(id="2" style="display: none;")
+
+                            .tabcontent(id="3" style="display: none;")
+
+                            .tabcontent(id="4" style="display: none;")
+                            
+                            .tabcontent(id="5" style="display: none;")
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  
