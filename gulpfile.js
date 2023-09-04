@@ -20,7 +20,7 @@ function style() {
     .pipe(concat('style.min.css'))
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./docs/css'))
+    .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
 }
 
@@ -32,7 +32,7 @@ function buildhtml() {
             pretty: 1
         })
     )
-    .pipe(gulp.dest('./docs'));
+    .pipe(gulp.dest('./dist'));
 }
 
 //compile js
@@ -41,7 +41,7 @@ function scripts() {
     .pipe(sourcemaps.init())
     .pipe(uglify({mangle: false}))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./docs/js'))
+    .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
 }
 
@@ -50,14 +50,14 @@ function scripts() {
 function watch() {
     browserSync.init({
         server: {
-           baseDir: "./docs/"
+           baseDir: "./dist/"
         }
     });
     gulp.watch('./src/scss/**/*.scss', style)
     gulp.watch('./src/pug/**/*.pug', buildhtml)
     gulp.watch('./src/js/**/*.js', scripts)
-    gulp.watch('./docs/**/*.html').on('change',browserSync.reload);
-    gulp.watch('./docs/js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('./dist/**/*.html').on('change',browserSync.reload);
+    gulp.watch('./dist/js/**/*.js').on('change', browserSync.reload);
 }
 
 
