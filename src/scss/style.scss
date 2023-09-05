@@ -548,8 +548,10 @@ section.products{
     font-weight: 500;
 }
 .cart-aside__weight{
-    padding: 15px 0;
+    padding: 12px 0;
     border-bottom: 1px solid $gray-300;
+    color: $gray-500;
+    font-size: 13px;
 }
 .cart-aside__delivery{
     padding-top: 20px;
@@ -584,7 +586,6 @@ section.products{
     padding: 30px 0;
     border: 0;
     border-top: 1px solid $gray-300;
-    border-bottom: 1px solid $gray-300;
 }
 
 .form-group.--radiogroup{
@@ -630,6 +631,7 @@ section.products{
 }
 .cart-table__footerSplit .form-group{
     margin: 0;
+    flex-shrink: 0;
 }
 .cart-table__footerSplit p{
     margin: 0;
@@ -666,5 +668,33 @@ section.products{
     border: 2px solid $gray-100;
     padding: 15px;
     color: $gray-900;
+    font-weight: 500;
+    background-image: url("../img/icons/download.svg");
+    background-position: center right 15px;
+    background-repeat: no-repeat;
+}
+
+
+.cart-table-personalAcc{
+    padding: 30px;
+    border: 1px solid $gray-300;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.cart-table-personalAcc img{
+    height: 42px;
+    opacity: 0.4;
+    margin-left: 10px;
+}
+.cart-table-personalAcc p{
+    margin: 0;
+    padding: 0;
+    color: $gray-900;
+    flex-grow: 1;
+}
+.cart-table-personalAcc .btn{
+    padding: 0 15px;
     font-weight: 500;
 }

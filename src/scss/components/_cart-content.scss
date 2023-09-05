@@ -107,6 +107,8 @@
     display: flex;
     padding-bottom: 0px;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .cart-item-name{
     padding-bottom: 0px;
@@ -356,7 +358,6 @@
     color: $green-500;
 }
 .cart-table-personal{
-    border: 1px solid $gray-300;
     display: flex;
     flex-direction: column;
     justify-content: center;

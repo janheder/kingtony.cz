@@ -348,9 +348,7 @@ if(document.getElementById('register-form')){
         document.getElementById("register-fa-state").toggleAttribute("required");
     }
 
-    document.getElementById('faComToggle').onclick = function() {
-        document.getElementById("register-fa-ico").toggleAttribute("required");
-    }
+
 }
 
 
