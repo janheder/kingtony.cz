@@ -628,6 +628,7 @@ section.products{
     gap: 15px;
     align-items: center;
     padding-bottom: 30px;
+
 }
 .cart-table__footerSplit .form-group{
     margin: 0;
@@ -697,4 +698,26 @@ section.products{
 .cart-table-personalAcc .btn{
     padding: 0 15px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 575px){
+    .cart-table-personalAcc{
+        padding: 20px;
+    }
+    .cart-table-personalAcc .btn{
+        white-space: nowrap;
+    }
+    .cart-table-personalAcc img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .cart-table__footerSplit{
+        flex-wrap: wrap;
+    }
+    .product-detail__files{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
 }

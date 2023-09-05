@@ -571,9 +571,12 @@
     padding-left: 20px;
     white-space: nowrap;
 }
-@media screen and (max-width: 565px){
+@media screen and (max-width: 575px){
     .cart-summary__item-content{
         flex-direction: column;
+    }
+    .cart-summary{
+        padding: 0 20px;
     }
 }
 

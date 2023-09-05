@@ -70,7 +70,10 @@
 }
 @media screen and (max-width: 575px){
     .product-card__fav{
-        top: -30px;
+        top: auto;
+        position: absolute;
+        bottom: 20px;
+        height: auto;
     }
 }
 
