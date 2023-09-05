@@ -31,6 +31,10 @@ nav .container{
     padding-left: 0;
     font-size: 15px;
     line-height: 1.3;
+
+    span{
+        flex-grow: 1;
+    }
 }
 .nav-link img, .nav-linkDesktop img{
     margin-left: 10px;
@@ -209,6 +213,7 @@ nav .container{
         background: $gray-100;
         padding: 10px 0;
         display: none;
+        left: 0;
     }
     .nav-submenu .container{
         padding-top: 0;

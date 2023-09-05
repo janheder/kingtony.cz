@@ -19,16 +19,6 @@ html(lang=lang)
                             .col-12.col-lg-7
                                 .product-detail__photos
 
-                                    .product-card__tags
-                                        .product-card__tagSingle
-                                            .tag.--sale Akce
-                                        .product-card__tagSingle    
-                                            .tag.--new Novinka
-                                        .product-card__tagSingle 
-                                            .tag.--recommended Doporučené
-                                        .product-card__tagSingle 
-                                            .tag.--top Top
-
                                     .product-card__tagsRight
                                         .product-card__tagSingle 
                                             .tag.--circleSale -18%
@@ -84,6 +74,17 @@ html(lang=lang)
 
                             .col-12.col-lg-5
                                 .product-detail__info
+
+                                    .product-card__tags
+                                        .product-card__tagSingle
+                                            .tag.--sale Akce
+                                        .product-card__tagSingle    
+                                            .tag.--new Novinka
+                                        .product-card__tagSingle 
+                                            .tag.--recommended Doporučené
+                                        .product-card__tagSingle 
+                                            .tag.--top Top
+
                                     h1.product-detail__title #{ProductName}
                                     .product-detail__code
                                         div Kód produktu: #[span(id="product-code") 7893/80X160-BI]
@@ -130,8 +131,8 @@ html(lang=lang)
                                                 button.btn.--green(name="add-to-cart") #[img(src="/img/icons/cart-white.svg" alt="Vložit do košíku")] Vložit do košíku
 
                         .tab.product-detail__tab
-                            button.tablinks.active(onclick="openCity(event, '1')") Popis a Parametry
-                            button.tablinks(onclick="openCity(event, '2')") Dokumenty k produktu
+                            button.tablinks.active(onclick="openTab(event, '1')") Popis a Parametry
+                            button.tablinks(onclick="openTab(event, '2')") Dokumenty k produktu
 
 
                         .tabcontent.product-detail__tabcontent(id="1" style="display: block;")

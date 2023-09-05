@@ -28,10 +28,12 @@
     color: $yellow-500;
 }
 .tag.--circleSale{
-    background: $red-500;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+    background: transparent;
+    height: 75px;
+    width:60px;
+    background-image: url("/img/icons/sale.svg");
+    background-size: contain;
+
     font-size: 16px;
     color: white;
     font-weight: 500;

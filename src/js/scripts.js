@@ -357,7 +357,7 @@ if(document.getElementById('register-form')){
 // TABS TOGGLE 
 // -----------------------------------------------------------------------------
 
-function openCity(evt, cityName) {
+function openTab(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
   
