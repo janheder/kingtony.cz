@@ -33,10 +33,16 @@
     width:60px;
     background-image: url("/img/icons/sale.svg");
     background-size: contain;
-
     font-size: 16px;
     color: white;
     font-weight: 500;
+}
+.product-card__thumb .tag.--circleSale{
+    background-image: none;
+    width: 54px;
+    height: 30px;
+    background-color: $red-500;
+    font-size: 14px;
 }
 .tag.--circle{
     background: #f7e517;

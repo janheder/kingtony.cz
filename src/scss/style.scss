@@ -710,12 +710,13 @@ section.products{
     .cart-table-personalAcc img{
         display: none;
     }
-}
-
-@media screen and (max-width: 991px){
     .cart-table__footerSplit{
         flex-wrap: wrap;
     }
+}
+
+@media screen and (max-width: 991px){
+
     .product-detail__files{
         grid-template-columns: 1fr 1fr;
         gap: 10px;

@@ -226,13 +226,13 @@
 }
 .cart-table__export{
     display: flex;
-    gap: 50px;
     background: $gray-100;
     padding: 40px;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
     flex-wrap: wrap;
+    gap: 20px 50px;
 }
 .cart-table__export-group{
     display: flex;
