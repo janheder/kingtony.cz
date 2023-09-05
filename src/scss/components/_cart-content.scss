@@ -149,6 +149,9 @@
     color: $gray-500;
     flex-shrink: 0;
     padding-left: 20px;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 14px;
 }
 .cart-item-price, .cart-item-code-price{
     font-weight: 500;
@@ -699,6 +702,6 @@
     }
     .cart-table__footer.--step1{
         display: flex;
-        
+
     }
 }
