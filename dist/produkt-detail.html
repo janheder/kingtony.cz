@@ -84,6 +84,33 @@
         </div>
       </div>
     </div>
+    <div class="modal micromodal-slide" id="modal-cart">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container --cart" role="dialog" aria-labelledby="modal-cart-title">
+          <div class="modal__image"><img src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína"></div>
+          <div class="modal__content" id="modal-cart-content">
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-cart-title">Přidáno do košíku</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <p class="modal__cart-title">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum dolor sit amet</p><span class="modal__cart-variant">Varianta: 154689</span><span class="modal__cart-variant">Počet kusů: 1</span><span class="modal__cart-price">1 118 Kč</span><span class="modal__cart-vat">od 923,97 Kč bez DPH</span>
+            <div class="modal__cart-btns"><span class="btn --cart-dark" aria-label="Close modal" data-micromodal-close>Zpět do obchodu</span><a class="btn --cart" href="/kosik-1.html">Do košíku <img src="/img/icons/cheveron-white.svg" alt="Pokračovat"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          MicroModal.show('modal-cart',{
+              openClass: 'is-open', 
+              disableScroll: true, 
+              disableFocus: true, 
+              awaitOpenAnimation: true,
+              awaitCloseAnimation: true, 
+              debugMode: false 
+          }); 
+      });
+    </script>
     <header>
       <div class="header-main"> 
         <div class="container"> 
@@ -482,7 +509,7 @@
       </nav>
       <main>
         <div class="breadcrumbs">
-          <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">Dřevěné boxy</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</span></div>
+          <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">RUČNÍ NÝTOVAČE</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY</span></div>
         </div>
         <section class="product-detail">
           <div class="container">
@@ -554,7 +581,7 @@
                     <div>Kód produktu: <span id="product-code">7893/80X160-BI</span></div>
                     <div>EAN: <span id="product-code">76564160265</span></div>
                   </div>
-                  <p class="product-detail__text">Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního... <a href="#productDescription">Číst více</a></p>
+                  <p class="product-detail__text">Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný<a href="#productDescription">Číst více</a></p>
                   <form class="product-detail__form" method="post">
                     <div class="variants" id="variants">
                       <div class="variants__title">Výběr varianty</div>
@@ -605,9 +632,9 @@
                 <div class="col-12 col-lg-7">
                   <div class="product-detail__description" id="productDescription">
                     <h2>Popis produktu</h2>
-                    <p>Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního tlustého lana, která je praktická a snadno přepravitelná.</p>
-                    <p>Přírodní odstín. Perfektní předmět pro jedinečný dárek, zajímavý dekorativní motiv - vnese do vašeho domova přirozený ekologický nádech.</p>
-                    <p>Na přání je možné dokoupit dřevěnou vlnu (hobliny) a rytinu.</p>
+                    <p>Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný</p>
+                    <p>Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný</p>
+                    <p>Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný</p>
                   </div>
                 </div>
                 <div class="col-12 col-lg-1"></div>
