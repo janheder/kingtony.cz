@@ -50,17 +50,13 @@ html(lang=lang)
                             form(method="get") 
                                 .products-sort__single
                                     input(type="radio" id="sort-1" name="sort-products" checked required onchange="this.form.submit()" value="1")
-                                    label(for="sort-1") Nejprodávanější
+                                    label(for="sort-1") Nejlevnější
                                 .products-sort__single
                                     input(type="radio" id="sort-2" name="sort-products" required onchange="this.form.submit()" value="2")
-                                    label(for="sort-2") Od nejnovějšího
+                                    label(for="sort-2") Nejdražší
                                 .products-sort__single
                                     input(type="radio" id="sort-3" name="sort-products" required onchange="this.form.submit()" value="3")
-                                    label(for="sort-3") Od nejlevnějšího
-                                .products-sort__single
-                                    input(type="radio" id="sort-4" name="sort-products" required onchange="this.form.submit()" value="4")
-                                    label(for="sort-4") Od nejdražšího
-
+                                    label(for="sort-3") Abecedně    
 
                         .products-heading
                             include components/_filter.pug
