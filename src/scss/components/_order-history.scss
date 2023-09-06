@@ -66,3 +66,9 @@
     font-weight: 500;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 575px){
+    .order-history{
+        padding: 0 20px;
+    }
+}

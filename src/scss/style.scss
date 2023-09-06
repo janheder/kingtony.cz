@@ -514,6 +514,24 @@ section.products{
     white-space: nowrap;
     flex-shrink: 0;
 }
+
+@media screen and (max-width: 575px){
+    .product-history{
+        padding: 0 20px;
+    }
+    .product-history__product{
+        flex-wrap: wrap;
+    }
+    .product-history__name{
+        flex-grow: 1;
+        width: calc(100% - 80px);
+    }
+    .product-history__qty{
+        flex-grow: 1;
+    }
+}
+
+
 .page-content .notice{
      margin: 0;
 }
