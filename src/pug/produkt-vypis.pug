@@ -15,13 +15,14 @@ html(lang=lang)
                 include components/_breadcrumbs.pug
                 section.page-heading
                     .container
-                        h1 RUČNÍ NÝTOVAČE
-                        div(id="pageDescription") 
-                            p Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný... #[span.read-more(id="readMore") Číst více]
-                            
-                        div(id="pageDescriptionFull") 
-                            p Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný
-                            span.read-more.--less(id="readLess") Skrýt popis
+                        .page-heading-inner
+                            h1 RUČNÍ NÝTOVAČE
+                            div(id="pageDescription") 
+                                p Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný... #[span.read-more(id="readMore") Číst více]
+                                
+                            div(id="pageDescriptionFull") 
+                                p Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný
+                                span.read-more.--less(id="readLess") Skrýt popis
                     script.
                         document.getElementById('readMore').onclick = function() {
                             document.getElementById('pageDescription').classList.toggle('--active');

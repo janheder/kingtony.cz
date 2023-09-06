@@ -221,6 +221,13 @@
   .modal__cart-btns{
     margin: 0;
     flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .modal__container.--cart .btn{
+    width: 100%;
+    margin: 0;
   }
 }
 

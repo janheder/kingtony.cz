@@ -578,6 +578,9 @@
     .cart-summary{
         padding: 0 20px;
     }
+    .cart-summary__item-title{
+        max-width: 100%;
+    }
 }
 
 
@@ -705,6 +708,8 @@
     }
     .cart-table__footer.--step1{
         display: flex;
-
+    }
+    .cart-empty{
+        padding: 60px 0;
     }
 }
