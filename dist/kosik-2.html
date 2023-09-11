@@ -45,6 +45,8 @@
     <!-- Plugins CSS-->
     <!-- Custom CSS-->
     <link href="/css/style.min.css" rel="stylesheet">
+    <script src="https://www.ppl.cz/sources/map/main.js" async defer></script>
+    <link href="https://www.ppl.cz/sources/map/main.css" rel="stylesheet">
     <script>
       /*
       	(function(h,o,t,j,a,r){
@@ -112,7 +114,9 @@
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-labelledby="modal-ppl-title">
           <div class="modal__content" id="modal-ppl-content">
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            <div class="modal__header">
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
             <div id="ppl-parcelshop-map"></div>
           </div>
         </div>

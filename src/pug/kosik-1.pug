@@ -5,6 +5,7 @@ html(lang=lang)
     include template/_head.pug  
     body.cart
         include components/_modal-login.pug
+        include components/_modal-cart-import.pug
 
         include components/_header.pug
 
@@ -102,7 +103,7 @@ html(lang=lang)
                                     .cart-table__footerSummary
                                         .cart-table__footerSummary-row
                                             span Cena bez DPH:
-                                            span 3 354 Kč
+                                            span #[span(id="goodsprice") 3354] Kč
                                         .cart-table__footerSummary-row
                                             span Cena včetně DPH
                                             span 3 354 Kč
@@ -128,13 +129,13 @@ html(lang=lang)
                                 .cart-table__export
                                     .cart-table__export-group
                                         span #[img(src="/img/icons/save.svg")] Exportovat košík
-                                        span.item CSV
-                                        span.item XML
+                                        a.item(href="#") CSV
+                                        a.item(href="#") XML
 
                                     .cart-table__export-group
                                         span #[img(src="/img/icons/upload.svg")] Načíst košík
-                                        span.item CSV
-                                        span.item XML
+                                        span.item(data-micromodal-trigger="modal-cart-import") CSV
+                                        span.item(data-micromodal-trigger="modal-cart-import") XML
 
 
 

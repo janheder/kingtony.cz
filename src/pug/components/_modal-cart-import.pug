@@ -1,0 +1,20 @@
+.modal.micromodal-slide(id="modal-cart-import")
+
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+
+
+    .modal__container(role="dialog" aria-labelledby="modal-cart-import-title")
+
+        .modal__content(id="modal-cart-import-content")
+            
+            .modal__header
+
+                h2.modal__title(id="modal-info-title") Importovat obsah košíku
+
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
+
+
+            
+            .form-group     
+                label(for="import") Vybrat CSV/XML
+                input(type="file" id="import" name="import")

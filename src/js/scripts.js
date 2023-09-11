@@ -77,46 +77,28 @@ document.body.addEventListener('click', function(e) {
 // -----------------------------------------------------------------------------
 
 
-var inc = document.getElementsByClassName("stepper");
+function initializeSteppers() {
+    const steppers = document.querySelectorAll('.stepper');
 
-if (inc.length > 0){
-    
-    for (abc = 0; abc < inc.length; abc++) {
-    var incI = inc[abc].querySelector("input"),
-        id = incI.getAttribute("id"),
-        min = incI.getAttribute("min"),
-        max = incI.getAttribute("max"),
-        step = incI.getAttribute("step");
-    document
-        .getElementById(id)
-        .previousElementSibling.setAttribute(
-        "onclick",
-        "stepperInput('" + id + "', -" + step + ", " + min + ")"
-        ); 
-    document
-        .getElementById(id)
-        .nextElementSibling.setAttribute(
-        "onclick",
-        "stepperInput('" + id + "', " + step + ", " + max + ")"
-        ); 
-    }
+    steppers.forEach(stepper => {
+        const input = stepper.querySelector('input');
+        const incrementButton = stepper.querySelector('.plus');
+        const decrementButton = stepper.querySelector('.minus');
 
-    function stepperInput(id, s, m) {
-        var event = new Event('change');
-        var el = document.getElementById(id);
-        if (s > 0) {
-            if (parseInt(el.value) < m) {
-            el.value = parseInt(el.value) + s;
-            el.dispatchEvent(event);
+        incrementButton.addEventListener('click', () => {
+            input.value = parseInt(input.value) + 1;
+        });
+
+        decrementButton.addEventListener('click', () => {
+            const currentValue = parseInt(input.value);
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
             }
-        } else {
-            if (parseInt(el.value) > m) {
-            el.value = parseInt(el.value) + s;
-            el.dispatchEvent(event);
-            }
-        }
-    }
+        });
+    });
 }
+
+initializeSteppers();
 
 
 // -----------------------------------------------------------------------------
@@ -420,3 +402,28 @@ if(document.getElementById('showCartRegisterPassword')
     }
 }
 
+
+
+document.addEventListener(
+    "ppl-parcelshop-map",
+    (event) => {
+        // vygenerujeme input prvky
+        //console.log("Vybraný parcel shop:", event.detail)
+        //alert(JSON.stringify(event.detail.id));
+        var ppl_parcel_id = JSON.stringify(event.detail.id);
+        var ppl_parcel_code = JSON.stringify(event.detail.code);
+        var ppl_parcel_shopname = JSON.stringify(event.detail.parcelshopName);
+        var ppl_parcel_name = JSON.stringify(event.detail.name);
+        var ppl_parcel_street = JSON.stringify(event.detail.street);
+        var ppl_parcel_city = JSON.stringify(event.detail.city);
+        var ppl_parcel_zip = JSON.stringify(event.detail.zipCode);
+        var ppl_parcel_country = JSON.stringify(event.detail.country);
+        
+        var ppl_parcel_adr = ppl_parcel_id+"|"+ppl_parcel_code.replace(/['"]+/g, '')+"|"+ppl_parcel_shopname.replace(/['"]+/g, '')+"|"+ppl_parcel_name.replace(/['"]+/g, '')+"|"+ppl_parcel_street.replace(/['"]+/g, '')+"|"+ppl_parcel_city.replace(/['"]+/g, '')+"|"+ppl_parcel_zip.replace(/['"]+/g, '')+"|"+ppl_parcel_country.replace(/['"]+/g, '');
+        document.getElementById("ppl_parcel_inp").value = ppl_parcel_adr;
+        document.getElementById("ppl_parcel_adr_obal").innerHTML = "Odběrné místo: "+ppl_parcel_name.replace(/['"]+/g, '')+"<br>"+ppl_parcel_street.replace(/['"]+/g, '')+", "+ppl_parcel_city.replace(/['"]+/g, '')+", "+ppl_parcel_zip.replace(/['"]+/g, '')+", "+ppl_parcel_country.replace(/['"]+/g, '');
+        
+        $('#modal-ppl').modal('hide');
+    }
+    );
+    
