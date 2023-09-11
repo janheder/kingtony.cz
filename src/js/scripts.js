@@ -84,9 +84,11 @@ function initializeSteppers() {
         const input = stepper.querySelector('input');
         const incrementButton = stepper.querySelector('.plus');
         const decrementButton = stepper.querySelector('.minus');
+        var event = new Event('change');
 
         incrementButton.addEventListener('click', () => {
             input.value = parseInt(input.value) + 1;
+            input.dispatchEvent(event);
         });
 
         decrementButton.addEventListener('click', () => {
@@ -94,6 +96,7 @@ function initializeSteppers() {
             if (currentValue > 1) {
                 input.value = currentValue - 1;
             }
+            input.dispatchEvent(event);
         });
     });
 }
