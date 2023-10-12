@@ -54,6 +54,8 @@ header{
 
 .header-main{
     padding: 15px 0;
+    border-top: 3px solid $red-500;
+    border-bottom: 3px solid $red-500;
 }
 .header-main .container{
     display: flex;
@@ -335,6 +337,7 @@ body.--user-active .header-nav .user__dropdown{
         width: 100%;
         box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.05);
         background: $blue-500;
+        border: 0;
     }
     .header-nav__link{
         display: none;
