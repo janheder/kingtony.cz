@@ -37,6 +37,13 @@ html(lang=lang)
                 section.subcategories
                     .container
                         .row 
+                            .col-8.col-sm-6.col-md-3
+                                .subcategories__single
+                                    a.subcategories__link(href="/produkt-vypis.html") 
+                                        .subcategories__img
+                                            img.lazyload(src="/img/load-symbol.svg" data-src="/img/cat-empty.jpg" alt="Krabice na alkohol" title="Krabice na alkohol" width="46" height="46")
+                                        .subcategories__title 2-stupňový ruční nýtovač
+
                             - for (var i=0; i<8; i++)
                                 .col-8.col-sm-6.col-md-3
                                     .subcategories__single

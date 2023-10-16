@@ -836,4 +836,11 @@ section.bestsellers{
 }
 .header-nav .user__dropdown a:last-child{
     border-top: 1px solid $gray-300;
+    margin-top: 10px;
+}
+.header-nav .user__dropdown a.--bold{
+    font-weight: 500;
+    border-bottom: 1px solid $gray-300;
+    color: $green-500;
+    margin-bottom: 10px;
 }
