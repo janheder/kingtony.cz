@@ -82,19 +82,20 @@ function initializeSteppers() {
 
     steppers.forEach(stepper => {
         const input = stepper.querySelector('input');
+        const inputstep = stepper.querySelector('input').getAttribute('step');
         const incrementButton = stepper.querySelector('.plus');
         const decrementButton = stepper.querySelector('.minus');
         var event = new Event('change');
 
         incrementButton.addEventListener('click', () => {
-            input.value = parseInt(input.value) + 1;
+            input.value = parseInt(input.value) + parseInt(inputstep);
             input.dispatchEvent(event);
         });
 
         decrementButton.addEventListener('click', () => {
             const currentValue = parseInt(input.value);
-            if (currentValue > 1) {
-                input.value = currentValue - 1;
+            if (currentValue > parseInt(inputstep)) {
+                input.value = currentValue - parseInt(inputstep);
             }
             input.dispatchEvent(event);
         });
