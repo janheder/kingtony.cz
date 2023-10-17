@@ -72,6 +72,14 @@ document.body.addEventListener('click', function(e) {
 });
 
 
+document.getElementById('productGalleryBackdrop').addEventListener('click', function() {
+    document.body.classList.remove('--activeProductCarousel');
+});
+document.getElementById('productGalleryClose').addEventListener('click', function() {
+    document.body.classList.remove('--activeProductCarousel');
+});
+
+
 // -----------------------------------------------------------------------------
 // NUMBER STEPPER
 // -----------------------------------------------------------------------------
@@ -141,8 +149,28 @@ document.addEventListener('DOMContentLoaded', function() {
 // PRODUCT DETAIL CARUSEL
 // -----------------------------------------------------------------------------
 
+    function imageClick(imageNumber) {
+        setTimeout(() => {
+            //Find the slider element
+            const sliderElement = document.getElementById('pgalleryModal');
+            //Slide to he right image
+            swiffyslider.slideTo(sliderElement, imageNumber);
+            //Listen to slide end and set focus to the container to enable keyboard navigation
+            
+            document.body.classList.add("--activeProductCarousel");
+            swiffyslider.onSlideEnd(sliderElement, () => sliderElement.querySelector(".slider-container").focus());
 
+        }, 300)
+    }
 
+    function thumbHover(imageNumber) {
+        //Find the slider element
+        const sliderElement = document.getElementById('pgallery');
+        //Slide to he right image
+        swiffyslider.slideTo(sliderElement, imageNumber)
+    }
+
+/*
     document.addEventListener("DOMContentLoaded", () => {
 
         var carousel = document.getElementsByClassName('product-detail__carousel');
@@ -170,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         let image = imageWrapper.querySelector('img');
                         let imagetitle = imageWrapper.querySelector('span');
                         if (image) {
-                            $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML + imagetitle.outerHTML;
+                            $lightbox.innerHTML = '<div class="next-lightbox" src="">next</div><div class="close-lightbox"></div>' + image.outerHTML + imagetitle.outerHTML;
                             $lightbox.classList.add('show');
                         }
                     }
@@ -243,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                             thumbCarousel.goTo(0);
                             
-                            /*var second =document.querySelector("#product-carousel > div > div:nth-child(2) img").src=imgSrc;*/
+                            
                         }
 
                     });
@@ -253,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+    */
 
 
 // -----------------------------------------------------------------------------

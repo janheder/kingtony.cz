@@ -47,6 +47,7 @@
     <link href="/css/style.min.css" rel="stylesheet">
     <script src="https://www.ppl.cz/sources/map/main.js" async defer></script>
     <link href="https://www.ppl.cz/sources/map/main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
     <script>
       /*
       	(function(h,o,t,j,a,r){
@@ -495,35 +496,60 @@
                       <div class="tag --free-delivery">Doprava zdarma</div>
                     </div>
                   </div>
-                  <div class="product-detail__carousel" id="product-carousel">
-                    <div class="product-detail__carouselItem">
-                      <div class="product-detail__carouselLink"><img src="/img/product-thumb-large.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" loading="lazy"><span>Lorem ipsum</span></div>
+                  <div id="productGallery">
+                    <div class="swiffy-slider slider-item-ratio slider-item-ratio-1x1 slider-nav-round slider-nav-nodelay" id="pgallery">
+                      <ul class="slider-container">
+                        <li><img src="https://placehold.co/600x600" loading="lazy" alt="..." data-bs-toggle="modal" data-bs-target="#productGalleryModal" onclick="imageClick(0)"></li>
+                        <li><img src="https://placehold.co/800x800" loading="lazy" alt="..." data-bs-toggle="modal" data-bs-target="#productGalleryModal" onclick="imageClick(1)"></li>
+                        <li><img src="https://placehold.co/500x500" loading="lazy" alt="..." data-bs-toggle="modal" data-bs-target="#productGalleryModal" onclick="imageClick(2)"></li>
+                        <li><img src="https://placehold.co/900x900" loading="lazy" alt="..." data-bs-toggle="modal" data-bs-target="#productGalleryModal" onclick="imageClick(3)"></li>
+                        <li><img src="https://placehold.co/700x700" loading="lazy" alt="..." data-bs-toggle="modal" data-bs-target="#productGalleryModal" onclick="imageClick(4)"></li>
+                        <li><img src="https://placehold.co/1000x1000" loading="lazy" alt="..." data-bs-toggle="modal" data-bs-target="#productGalleryModal" onclick="imageClick(5)"></li>
+                      </ul>
+                      <button class="slider-nav" type="button" aria-label="Go previous"></button>
+                      <button class="slider-nav slider-nav-next" type="button" aria-label="Go next"></button>
+                      <div class="product-card__fav"><a href="#"><img src="/img/icons/heart.svg"> Do oblíbených</a><a class="--remove" href="#"><img src="/img/icons/heart-remove.svg"> Odstranit</a></div>
                     </div>
-                    <div class="product-detail__carouselItem">
-                      <div class="product-detail__carouselLink"><img src="/img/product-thumb-large.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" loading="lazy"><span>Lorem ipsum</span></div>
+                    <div class="swiffy-slider slider-nav-dark slider-nav-sm slider-nav-chevron slider-item-show4 slider-item-snapstart slider-item-ratio slider-item-ratio-1x1 slider-nav-visible slider-nav-page slider-nav-outside-expand pt-3 d-none d-lg-block">
+                      <ul class="slider-container" id="pgallerythumbs" style="cursor:pointer">
+                        <li><img src="https://placehold.co/600x600" loading="lazy" alt="..." onmouseover="thumbHover(0)"></li>
+                        <li><img src="https://placehold.co/800x800" loading="lazy" alt="..." onmouseover="thumbHover(1)"></li>
+                        <li><img src="https://placehold.co/500x500" loading="lazy" alt="..." onmouseover="thumbHover(2)"></li>
+                        <li><img src="https://placehold.co/900x900" loading="lazy" alt="..." onmouseover="thumbHover(3)"></li>
+                        <li><img src="https://placehold.co/700x700" loading="lazy" alt="..." onmouseover="thumbHover(4)"></li>
+                        <li><img src="https://placehold.co/1000x1000" loading="lazy" alt="..." onmouseover="thumbHover(5)"></li>
+                      </ul>
+                      <button class="slider-nav" type="button" aria-label="Go previous"></button>
+                      <button class="slider-nav slider-nav-next" type="button" aria-label="Go next"></button>
                     </div>
-                    <div class="product-detail__carouselItem">
-                      <div class="product-detail__carouselLink"><img src="/img/product-thumb-large.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" loading="lazy"><span>Lorem ipsum</span></div>
-                    </div>
-                  </div>
-                  <button class="prev" aria-label="Zpět"><img src="/img/icons/cheveron.svg" alt="Zpět"></button>
-                  <button class="next" aria-label="Vpřed"><img src="/img/icons/cheveron.svg" alt="Vpřed"></button>
-                  <div class="lightbox" id="lightbox"></div>
-                  <div class="product-card__fav"><a href="#"><img src="/img/icons/heart.svg"> Do oblíbených</a><a class="--remove" href="#"><img src="/img/icons/heart-remove.svg"> Odstranit</a></div>
-                  <div class="product-detail__thumbs"> 
-                    <div class="product-detail__thumbWrap">
-                      <div class="product-detail__thumb" id="thumb0">
-                        <div class="product-detail__thumbInner"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb1"></div>
-                      </div>
-                    </div>
-                    <div class="product-detail__thumbWrap">
-                      <div class="product-detail__thumb" id="thumb1">
-                        <div class="product-detail__thumbInner"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb2"></div>
-                      </div>
-                    </div>
-                    <div class="product-detail__thumbWrap">   
-                      <div class="product-detail__thumb" id="thumb2">
-                        <div class="product-detail__thumbInner"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb3"></div>
+                    <div class="modal fade" id="productGalleryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div id="productGalleryBackdrop"></div>
+                      <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                        <div id="productGalleryClose">Zavřít</div>
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            <div class="swiffy-slider h-100 slider-nav-dark" id="pgalleryModal">
+                              <ul class="slider-container" tabindex="-1">
+                                <li class="d-flex align-items-center justify-content-center"><img class="mw-100 mh-100" src="https://placehold.co/600x600" loading="lazy" alt="..." data-bs-dismiss="modal"></li>
+                                <li class="d-flex align-items-center justify-content-center"><img class="mw-100 mh-100" src="https://placehold.co/800x800" loading="lazy" alt="..." data-bs-dismiss="modal"></li>
+                                <li class="d-flex align-items-center justify-content-center"><img class="mw-100 mh-100" src="https://placehold.co/500x500" loading="lazy" alt="..." data-bs-dismiss="modal"></li>
+                                <li class="d-flex align-items-center justify-content-center"><img class="mw-100 mh-100" src="https://placehold.co/900x900" loading="lazy" alt="..." data-bs-dismiss="modal"></li>
+                                <li class="d-flex align-items-center justify-content-center"><img class="mw-100 mh-100" src="https://placehold.co/700x700" loading="lazy" alt="..." data-bs-dismiss="modal"></li>
+                                <li class="d-flex align-items-center justify-content-center"><img class="mw-100 mh-100" src="https://placehold.co/1000x1000" loading="lazy" alt="..." data-bs-dismiss="modal"></li>
+                              </ul>
+                              <button class="slider-nav" type="button" aria-label="Go previous"></button>
+                              <button class="slider-nav slider-nav-next" type="button" aria-label="Go next"></button>
+                              <ul class="slider-indicators slider-indicators-dark slider-indicators-highlight slider-indicators-round">
+                                <li class="active"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -577,7 +603,7 @@
                     </div>
                     <div class="product-detail__cta"> 
                       <div class="product-detail__qty stepper" id="qty-stepper"> <span class="minus">–</span>
-                        <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
+                        <input id="qty-stepper-input" type="number" value="3" min="3" max="100" step="3" aria-label="Počet položek" required readonly><span class="plus">+</span>
                       </div>
                       <div class="product-detail__button"> 
                         <button class="btn --green" name="add-to-cart"><img src="/img/icons/cart-white.svg" alt="Vložit do košíku"> Vložit do košíku</button>
@@ -854,6 +880,7 @@
     <script src="/js/lazysizes.min.js"></script>
     <script src="/js/instant.page.min.js"></script>
     <script src="/js/siema.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
     <script src="/js/scripts.js"></script>
     <!-- PWA init-->
     <script src="/upup.min.js"></script>

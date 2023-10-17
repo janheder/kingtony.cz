@@ -28,44 +28,83 @@ html(lang=lang)
                                         .product-card__tagSingle 
                                             .tag.--free-delivery Doprava zdarma
 
+                                    #productGallery
 
-                                    .product-detail__carousel(id="product-carousel")
-                                        .product-detail__carouselItem
-                                            .product-detail__carouselLink
-                                                img(src="/img/product-thumb-large.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" loading="lazy")
-                                                span Lorem ipsum
-                                        .product-detail__carouselItem
-                                            .product-detail__carouselLink
-                                                img(src="/img/product-thumb-large.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" loading="lazy")
-                                                span Lorem ipsum
-                                        .product-detail__carouselItem
-                                            .product-detail__carouselLink
-                                                img(src="/img/product-thumb-large.jpg" alt="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" title="2-STUPŇOVÝ RUČNÍ NÝTOVAČ NA OCELOVÉ NÝTY lorem ipsum" loading="lazy")
-                                                span Lorem ipsum
 
-                                    button.prev(aria-label="Zpět")
-                                        img(src="/img/icons/cheveron.svg" alt="Zpět")
-                                    button.next(aria-label="Vpřed")
-                                        img(src="/img/icons/cheveron.svg" alt="Vpřed")
+                                        #pgallery.swiffy-slider.slider-item-ratio.slider-item-ratio-1x1.slider-nav-round.slider-nav-nodelay
+                                            ul.slider-container
+                                                li
+                                                    img(src='https://placehold.co/600x600' loading='lazy' alt='...' data-bs-toggle='modal' data-bs-target='#productGalleryModal' onclick='imageClick(0)')
+                                                li
+                                                    img(src='https://placehold.co/800x800' loading='lazy' alt='...' data-bs-toggle='modal' data-bs-target='#productGalleryModal' onclick='imageClick(1)')
+                                                li
+                                                    img(src='https://placehold.co/500x500' loading='lazy' alt='...' data-bs-toggle='modal' data-bs-target='#productGalleryModal' onclick='imageClick(2)')
+                                                li
+                                                    img(src='https://placehold.co/900x900' loading='lazy' alt='...' data-bs-toggle='modal' data-bs-target='#productGalleryModal' onclick='imageClick(3)')
+                                                li
+                                                    img(src='https://placehold.co/700x700' loading='lazy' alt='...' data-bs-toggle='modal' data-bs-target='#productGalleryModal' onclick='imageClick(4)')
+                                                li
+                                                    img(src='https://placehold.co/1000x1000' loading='lazy' alt='...' data-bs-toggle='modal' data-bs-target='#productGalleryModal' onclick='imageClick(5)')
 
-                                    .lightbox(id="lightbox")
+                                            button.slider-nav(type='button' aria-label='Go previous')
+                                            button.slider-nav.slider-nav-next(type='button' aria-label='Go next')
 
-                                    .product-detail__thumbs 
+                                            .product-card__fav
+                                                a(href="#") #[img(src="/img/icons/heart.svg")] Do oblíbených
+                                                a.--remove(href="#") #[img(src="/img/icons/heart-remove.svg")] Odstranit
 
-                                        .product-detail__thumbWrap
-                                            .product-detail__thumb(id="thumb0")
-                                                .product-detail__thumbInner
-                                                    img.lazyload(src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb1")
 
-                                        .product-detail__thumbWrap
-                                            .product-detail__thumb(id="thumb1")
-                                                .product-detail__thumbInner
-                                                    img.lazyload(src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb2")
+                                        .swiffy-slider.slider-nav-dark.slider-nav-sm.slider-nav-chevron.slider-item-show4.slider-item-snapstart.slider-item-ratio.slider-item-ratio-1x1.slider-nav-visible.slider-nav-page.slider-nav-outside-expand.pt-3.d-none.d-lg-block
+                                            ul#pgallerythumbs.slider-container(style='cursor:pointer')
+                                                li
+                                                    img(src='https://placehold.co/600x600' loading='lazy' alt='...' onmouseover='thumbHover(0)')
+                                                li
+                                                    img(src='https://placehold.co/800x800' loading='lazy' alt='...' onmouseover='thumbHover(1)')
+                                                li
+                                                    img(src='https://placehold.co/500x500' loading='lazy' alt='...' onmouseover='thumbHover(2)')
+                                                li
+                                                    img(src='https://placehold.co/900x900' loading='lazy' alt='...' onmouseover='thumbHover(3)')
+                                                li
+                                                    img(src='https://placehold.co/700x700' loading='lazy' alt='...' onmouseover='thumbHover(4)')
+                                                li
+                                                    img(src='https://placehold.co/1000x1000' loading='lazy' alt='...' onmouseover='thumbHover(5)')
 
-                                        .product-detail__thumbWrap    
-                                            .product-detail__thumb(id="thumb2")
-                                                .product-detail__thumbInner
-                                                    img.lazyload(src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb3")
+                                            button.slider-nav(type='button' aria-label='Go previous')
+                                            button.slider-nav.slider-nav-next(type='button' aria-label='Go next')
+
+
+                                        #productGalleryModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                                            #productGalleryBackdrop
+                                            .modal-dialog.modal-dialog-centered.modal-fullscreen
+                                                .modal-content
+                                                    .modal-body
+                                                        #pgalleryModal.swiffy-slider.h-100.slider-nav-dark
+                                                            ul.slider-container(tabindex='-1')
+                                                                li.d-flex.align-items-center.justify-content-center
+                                                                    img.mw-100.mh-100(src='https://placehold.co/600x600' loading='lazy' alt='...' data-bs-dismiss='modal')
+                                                                li.d-flex.align-items-center.justify-content-center
+                                                                    img.mw-100.mh-100(src='https://placehold.co/800x800' loading='lazy' alt='...' data-bs-dismiss='modal')
+                                                                li.d-flex.align-items-center.justify-content-center
+                                                                    img.mw-100.mh-100(src='https://placehold.co/500x500' loading='lazy' alt='...' data-bs-dismiss='modal')
+                                                                li.d-flex.align-items-center.justify-content-center
+                                                                    img.mw-100.mh-100(src='https://placehold.co/900x900' loading='lazy' alt='...' data-bs-dismiss='modal')
+                                                                li.d-flex.align-items-center.justify-content-center
+                                                                    img.mw-100.mh-100(src='https://placehold.co/700x700' loading='lazy' alt='...' data-bs-dismiss='modal')
+                                                                li.d-flex.align-items-center.justify-content-center
+                                                                    img.mw-100.mh-100(src='https://placehold.co/1000x1000' loading='lazy' alt='...' data-bs-dismiss='modal')
+
+                                                            button.slider-nav(type='button' aria-label='Go previous')
+                                                            button.slider-nav.slider-nav-next(type='button' aria-label='Go next')
+
+                                                            ul.slider-indicators.slider-indicators-dark.slider-indicators-highlight.slider-indicators-round
+                                                                li.active
+                                                                li
+                                                                li
+                                                                li
+                                                                li
+                                                                li
+
+
 
 
 
