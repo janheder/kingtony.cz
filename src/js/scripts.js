@@ -71,13 +71,16 @@ document.body.addEventListener('click', function(e) {
     }
 });
 
+var productGallery = document.getElementById('productGallery');
+if(productGallery){
+    document.getElementById('productGalleryBackdrop').addEventListener('click', function() {
+        document.body.classList.remove('--activeProductCarousel');
+    });
+    document.getElementById('productGalleryClose').addEventListener('click', function() {
+        document.body.classList.remove('--activeProductCarousel');
+    });
+}
 
-document.getElementById('productGalleryBackdrop').addEventListener('click', function() {
-    document.body.classList.remove('--activeProductCarousel');
-});
-document.getElementById('productGalleryClose').addEventListener('click', function() {
-    document.body.classList.remove('--activeProductCarousel');
-});
 
 
 // -----------------------------------------------------------------------------
