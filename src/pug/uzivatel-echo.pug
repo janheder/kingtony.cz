@@ -1,0 +1,29 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "uzivatel-info";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        #wrapper
+            include components/_nav.pug
+            main
+                include components/_breadcrumbs.pug
+
+                .page.--narrow  
+                    section.page-heading
+                
+                        h1 ODHLÁŠENÍ
+                        p Byl/a jste odhlášen/a.
+                        p Pro přihášení použijte odkaz PŘIHLÁSIT v záhlaví stránky.
+                        a.btn.--green(href="/") Zpět do obchodu
+
+
+
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

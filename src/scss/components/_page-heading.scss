@@ -14,6 +14,16 @@
     padding: 0 20px;
     font-size: 14px;
 }
+.page.--narrow .page-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page.--narrow .page-heading .btn{
+    position: relative;
+    right: 0;
+    margin-top: 60px;
+}
 .page-heading.--inline .container{
     display: flex;
     align-items: center;
