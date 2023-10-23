@@ -1,8 +1,9 @@
 var cart = document.getElementsByClassName('cart-content');
+
 if (cart.length>0){
 
 
-
+    var vatValue = 1.21;
 
     /* CART 1 */
 
@@ -31,7 +32,7 @@ if (cart.length>0){
 
             let result_f = result.toFixed(0).toString().replace(/\./g, ',');
             document.getElementById('goodsprice').innerText = result_f;
-            document.getElementById('goodspriceDPH').innerText = ((result_f)*1.21).toFixed(0);
+            document.getElementById('goodspriceDPH').innerText = ((result_f)*vatValue).toFixed(0);
         
 
         };
@@ -73,9 +74,9 @@ if (cart.length>0){
     
 
         var productprice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
-        var pricecart2 = (deliveryprice + productprice).toFixed(2);
+        var pricecart2 = (deliveryprice + productprice).toFixed(0);
         document.getElementById('sumprice').innerText = pricecart2;
-
+        document.getElementById('vatsumprice').innerText = ((pricecart2)*vatValue).toFixed(0);
     };
 
     for (var ia = 0; ia < elms.length; ia++) {
