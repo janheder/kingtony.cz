@@ -75,7 +75,9 @@
     border: 1px solid #D61818;
     padding-left: 10px;
     padding-right: 10px;
+    margin: 0 -10px;
 }
+
 .cart-item-thumb-wrap{
     position: relative;
     width: 74px;
@@ -551,7 +553,12 @@
     padding: 20px 0;
     border-bottom: 1px solid $gray-300;
 }
-
+.cart-summary__item.--unavailable{
+    border: 1px solid $red-500;
+    padding: 20px 10px;
+    margin: 0 -10px;
+    width: auto;
+}
 .cart-summary__item:first-child{
     border-top: 1px solid $gray-300;
 }
