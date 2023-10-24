@@ -146,6 +146,8 @@
     align-items: flex-end;
     justify-content: center; 
     flex-shrink: 0;  
+    width: 110px;
+    white-space: nowrap;
 }
 
 .cart-item-price-pc{
@@ -592,9 +594,9 @@
 .cart-summary__item-price{
     font-weight: 500;
     color: $red-500;
-
+    width: 100px;
     text-align: right;
-    padding-left: 20px;
+    padding-left: 0px;
     white-space: nowrap;
 }
 @media screen and (max-width: 575px){
