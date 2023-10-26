@@ -21,6 +21,9 @@
 
 @import "components/**/*";
 
+:root{
+    scroll-behavior: auto;
+}
 html {
     background: $gray-200;
 }
@@ -432,6 +435,7 @@ section.products {
 
 .tab {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tablinks {
@@ -1039,3 +1043,8 @@ body.--activeProductCarousel #productGalleryBackdrop {
     z-index: 99;
     cursor: pointer;
 }
+
+.page-content li strong{
+    display: inline-block;
+    margin: 0;
+  }

@@ -42,7 +42,7 @@ html(lang=lang)
                                 input(type="text" id="register-surname" name="register-surname" required minlength="2" maxlength="45")
                             .form-group     
                                 label(for="register-email") Email
-                                | <input type="email" id="register-email" name="register-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})">
+                                | <input type="email" id="register-email" name="register-email" required minlength="6" maxlength="255" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                             .form-group     
                                 label(for="register-tel") Telefon 
                                 | <input type="tel" id="register-tel" name="register-tel" required value="" pattern="\d{1,15}">
