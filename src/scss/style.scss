@@ -1048,3 +1048,11 @@ body.--activeProductCarousel #productGalleryBackdrop {
     display: inline-block;
     margin: 0;
   }
+  .user__company{
+    color: #fff;
+    font-size: 13px;
+        white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 1.2;
+  }
