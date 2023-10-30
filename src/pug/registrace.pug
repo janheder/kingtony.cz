@@ -45,7 +45,7 @@ html(lang=lang)
                                 | <input type="email" id="register-email" name="register-email" required minlength="6" maxlength="255" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                             .form-group     
                                 label(for="register-tel") Telefon 
-                                | <input type="tel" id="register-tel" name="register-tel" required value="" pattern="\d{1,15}">
+                                | <input type="tel" id="register-tel" name="register-tel" required value="" pattern="^(\+[0-9]{3})? ?[0-9]{3} ?[0-9]{3} ?[0-9]{3}$">
                             .form-group     
                                 label(for="register-password") Heslo
                                 | <input type="password" id="heslo" name="heslo" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$">
