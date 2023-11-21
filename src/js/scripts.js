@@ -303,20 +303,6 @@ for (let loop = 0; loop < navitem.length; loop++) {
 }
 
 
-$(".nav-linkDesktop").hover(
-    function () {
-      setTimeout(function(){
-        $(this).closest(".nav-item.expandable").addClass("result_hover");
-    }.bind(this), 600);
-  
-    },
-    function () {
-      setTimeout(function(){
-        $(this).closest(".nav-item.expandable").removeClass("result_hover");
-    }.bind(this), 600);
-    }
-  );
-
 // -----------------------------------------------------------------------------
 // PRODUCT DETAIL VARIANTS
 // -----------------------------------------------------------------------------
