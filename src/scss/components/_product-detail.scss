@@ -262,7 +262,7 @@
     background-image: url("../img/icons/cross.svg");
     background-repeat: no-repeat;
     background-position: left center;
-    color: #f96c1d;
+    color: #6e6e6e;
 }
 .product-detail__stock[data-status="active"]{
     color: $green-500;
@@ -270,6 +270,13 @@
     background-image: url("../img/icons/check.svg");
     background-repeat: no-repeat;
     background-position: left center;
+}
+.product-detail__stock[data-status="soon"]{
+    padding-left: 22px;
+    background-image: url("../img/icons/time.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    color: #f96c1d;
 }
 .product-detail__price{
     padding-bottom: 40px;
