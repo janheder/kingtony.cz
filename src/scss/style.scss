@@ -1067,3 +1067,46 @@ body.--activeProductCarousel #productGalleryBackdrop {
   #productGallery #pgallery.slider-item-ratio-1x1{
         --swiffy-slider-item-ratio: 4/3
   }  
+
+  @media screen and (min-width: 992px) {
+    .nav-item.expandable:hover .nav-submenu{
+        opacity: 0;
+          pointer-events: none;
+      }
+      .nav-item.expandable.result_hover .nav-submenu{
+         opacity: 1;
+        pointer-events: auto;
+      }
+      .nav-item.expandable .nav-submenu:hover{
+          pointer-events: auto;
+        opacity: 1;
+      }
+      .nav-submenu__single ul{
+        padding-bottom: 0;
+        padding-left: 25px;
+      }
+      .nav-submenu__single{
+        padding: 0px 0;
+      }
+      .nav-submenu .row{
+      display: grid;
+          grid-template-columns: repeat(4,minmax(0,1fr));
+          grid-gap: 40px 20px;
+        padding: 40px 0;
+      }
+      .nav-submenu .row .col-lg-4{
+        width: 100%;
+        padding: 0;
+      }
+      .nav-submenu__title{
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      .nav-submenu__single li{
+          font-size: 13px;
+      }  
+      .nav-submenu__single img{
+        width: 60px;
+      }
+}
+
