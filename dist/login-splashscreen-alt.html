@@ -504,6 +504,19 @@
                 <div class="splashscreen-item-text"> <span>Firma s.r.o.</span><small> <b>IČO: 123467898</b><b>DIČ: CZ16442425572</b></small></div>
                 <div class="btn btn-secondary">Zvolit firmu</div></a>
             </div>
+            <script>
+              document.addEventListener('click', function(e) {
+              var content = document.querySelector('.page.--narrow');
+              var clickedElement = e.target;
+              
+              // Check if the clicked element is not within the .content div and is a link
+              if (!content.contains(clickedElement) && clickedElement.closest('a')) {
+                  e.preventDefault(); // Prevent the default link behavior
+                  location.reload(); // Reload the page
+              }
+              });
+              
+            </script>
           </div>
         </div>
       </main>

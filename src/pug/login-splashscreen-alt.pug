@@ -31,7 +31,19 @@ html(lang=lang)
                                             b DIČ: CZ16442425572
                                     .btn.btn-secondary Zvolit firmu
 
-        
+                        script.
+
+                            document.addEventListener('click', function(e) {
+                            var content = document.querySelector('.page.--narrow');
+                            var clickedElement = e.target;
+
+                            // Check if the clicked element is not within the .content div and is a link
+                            if (!content.contains(clickedElement) && clickedElement.closest('a')) {
+                                e.preventDefault(); // Prevent the default link behavior
+                                location.reload(); // Reload the page
+                            }
+                            });
+
         include components/_footer.pug
 
         include template/_scripts.pug  
