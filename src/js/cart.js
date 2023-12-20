@@ -69,9 +69,9 @@ if (cart.length>0){
         let deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
 
         
-        var delp = (deliveryprice).toFixed(2);
+        var delp = (deliveryprice).toFixed(0);
         document.getElementById('delprice').innerText = delp;        
-    
+
 
         var productprice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
         var pricecart2 = (deliveryprice + productprice).toFixed(0);
