@@ -20,7 +20,7 @@ if (cart.length>0){
         let calcEvent = function() {
 
             if (this.value > 0) {
-                overallPriceElement.innerText = (price * this.value).toFixed(0).toString();
+                overallPriceElement.innerText = parseFloat((price * this.value).toFixed(2)).toString();
             } else {
                 overallPriceElement.innerText = "0";
             }
@@ -30,9 +30,9 @@ if (cart.length>0){
             let pricegoods = document.querySelectorAll('.cart-item-price span');
             let result = Array.from(pricegoods).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
 
-            let result_f = result.toFixed(0).toString().replace(/\./g, ',');
-            document.getElementById('goodsprice').innerText = result_f;
-            document.getElementById('goodspriceDPH').innerText = ((result_f)*vatValue).toFixed(0);
+            let result_f = result.toFixed(2);
+            document.getElementById('goodsprice').innerText = parseFloat(result_f).toString().replace(/\./g, ',');
+            document.getElementById('goodspriceDPH').innerText = parseFloat((result_f*vatValue).toFixed(2)).toString().replace(/\./g, ',');
         
 
         };
@@ -69,14 +69,14 @@ if (cart.length>0){
         let deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
 
         
-        var delp = (deliveryprice).toFixed(0);
+        var delp = parseFloat((deliveryprice).toFixed(2));
         document.getElementById('delprice').innerText = delp;        
 
 
         var productprice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
-        var pricecart2 = (deliveryprice + productprice).toFixed(0);
+        var pricecart2 = parseFloat((deliveryprice + productprice).toFixed(2));
         document.getElementById('sumprice').innerText = pricecart2;
-        document.getElementById('vatsumprice').innerText = ((pricecart2)*vatValue).toFixed(0);
+        document.getElementById('vatsumprice').innerText = parseFloat(((pricecart2)*vatValue).toFixed(2));
     };
 
     for (var ia = 0; ia < elms.length; ia++) {
