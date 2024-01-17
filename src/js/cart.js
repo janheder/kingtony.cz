@@ -32,7 +32,7 @@ if (cart.length>0){
 
             let result_f = result.toFixed(2);
             document.getElementById('goodsprice').innerText = parseFloat(result_f).toString().replace(/\./g, ',');
-            document.getElementById('goodspriceDPH').innerText = parseFloat((result_f*vatValue).toFixed(2)).toString().replace(/\./g, ',');
+            document.getElementById('goodspriceDPH').innerText = parseFloat((result_f*vatValue).toFixed(0)).toString().replace(/\./g, ',');
         
 
         };
@@ -76,7 +76,7 @@ if (cart.length>0){
         var productprice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
         var pricecart2 = parseFloat((deliveryprice + productprice).toFixed(2));
         document.getElementById('sumprice').innerText = pricecart2;
-        document.getElementById('vatsumprice').innerText = parseFloat(((pricecart2)*vatValue).toFixed(2));
+        document.getElementById('vatsumprice').innerText = parseFloat(((pricecart2)*vatValue).toFixed(0));
     };
 
     for (var ia = 0; ia < elms.length; ia++) {
