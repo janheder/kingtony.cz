@@ -1110,3 +1110,30 @@ body.--activeProductCarousel #productGalleryBackdrop {
       }
 }
 
+@media screen and (max-width: 991px){
+    .header-nav .user__wrap{
+      display: none;
+    }
+    }
+    @media screen and (max-width: 767px){
+      .user-files-table-footer{
+        flex-direction: column;
+        gap: 10px;
+      }
+      .cart-item{
+        position: relative;
+      }
+      .cart-item-remove{
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+      }
+      .cart-summary__table td {
+        white-space: normal;
+    }
+      .tab .tablinks{
+        width: 100%;
+        border: 1px solid #e5e5e5;
+      }
+    }
+    
