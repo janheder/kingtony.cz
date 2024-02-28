@@ -48,6 +48,9 @@
     padding-top: 4px;
     opacity: 0.85;
 }
+.searchAutocomplete__linkSub span.--available{
+    color: $green-500;
+}
 @media screen and (max-width: 991px){
     .searchAutocomplete {
         left: -10px;
