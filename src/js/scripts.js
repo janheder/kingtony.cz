@@ -96,11 +96,20 @@ function initializeSteppers() {
         const inputstep = stepper.querySelector('input').getAttribute('step');
         const incrementButton = stepper.querySelector('.plus');
         const decrementButton = stepper.querySelector('.minus');
+        let cartItem = stepper.closest('.cart-item'); // Get the closest .cart-item element
+        if (!cartItem) {
+            cartItem = stepper.closest('.product-card'); // If no .cart-item, look for .product-card
+        }
+        if (!cartItem) {
+            cartItem = stepper.closest('.product-detail__cta');
+        }
+
         var event = new Event('change');
 
         incrementButton.addEventListener('click', () => {
             input.value = parseInt(input.value) + parseInt(inputstep);
             input.dispatchEvent(event);
+            checkStock(input, cartItem); // Check stock after changing the input value
         });
 
         decrementButton.addEventListener('click', () => {
@@ -109,11 +118,83 @@ function initializeSteppers() {
                 input.value = currentValue - parseInt(inputstep);
             }
             input.dispatchEvent(event);
+            checkStock(input, cartItem); // Check stock after changing the input value
         });
+
+        // Check stock initially
+        checkStock(input, cartItem);
     });
 }
 
+function checkStock(input, cartItem) {
+    const stock = parseInt(input.dataset.stock || 0); // Get the value of data-stock attribute, default to 0 if not set
+    const currentValue = parseInt(input.value);
+    
+    if (stock === 0 && currentValue === 1) {
+        // If stock is 0 and input value is 1, do nothing
+        return;
+    }
+
+    if (currentValue > stock) {
+        // If input value exceeds stock
+        if (cartItem) {
+            cartItem.classList.add('--unavailable');
+        }
+    } else {
+        // If input value is within or equal to stock
+        if (cartItem) {
+            cartItem.classList.remove('--unavailable');
+        }
+    }
+}
+
 initializeSteppers();
+
+
+var cart = document.getElementsByClassName('cart-table-items');
+
+if (cart.length>0){
+    // Select the closest common ancestor of all .cart-item elements
+    const commonAncestor = document.querySelector('.cart-table-items'); // Update this selector with the appropriate ancestor class/id
+
+    // Options for the observer (which mutations to observe)
+    const config = { attributes: true, childList: true, subtree: true };
+
+    // Callback function to execute when mutations are observed
+    const callback = function(mutationsList, observer) {
+        const cartItems = commonAncestor.querySelectorAll('.cart-item');
+        const unavailableItems = commonAncestor.querySelectorAll('.cart-item.--unavailable');
+        const obalRozdelit = document.getElementById('obal_rozdelit');
+        var radioInputs = obalRozdelit.querySelectorAll('input[type="radio"]');
+        
+        if ((unavailableItems.length === 0 || unavailableItems.length === cartItems.length) && obalRozdelit) {
+            obalRozdelit.classList.add('--hide');
+            obalRozdelit.classList.remove('--show');
+            radioInputs.forEach(function(radioInput) {
+                radioInput.removeAttribute('required');
+            });
+        } else if (unavailableItems.length > 0 && unavailableItems.length < cartItems.length && obalRozdelit) {
+            obalRozdelit.classList.remove('--hide');
+            obalRozdelit.classList.add('--show');
+            radioInputs.forEach(function(radioInput) {
+                radioInput.setAttribute('required', 'required');
+            });
+        }
+    };
+
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(callback);
+
+    // Start observing the common ancestor for configured mutations
+    observer.observe(commonAncestor, config);
+}
+
+
+
+
+document.getElementById('user-info').addEventListener('change', function() {
+    ZmenDodaciAdresu();
+});
 
 
 // -----------------------------------------------------------------------------
@@ -438,6 +519,17 @@ if(document.getElementById('showCartRegisterPassword')
     }
 }
 
+if(document.getElementById('showResetPassword')
+){
+    document.getElementById('showResetPassword').onclick = function() {
+        var x = document.getElementById('password-email');
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+}
 
 
 document.addEventListener(

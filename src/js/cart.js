@@ -53,12 +53,15 @@ if (cart.length>0){
     
     }
     recountCart();
+	  
 
 
 
 
 
-    /* CART 2 */
+
+
+    /******************************  CART 2 *****************************/
     
 
     function recountDeliveryCart(){
