@@ -191,10 +191,13 @@ if (cart.length>0){
 
 
 
+let userInfo = document.getElementById("user-info");
+if(userInfo) {
+    document.getElementById('user-info').addEventListener('change', function() {
+        ZmenDodaciAdresu();
+    });    
+}
 
-document.getElementById('user-info').addEventListener('change', function() {
-    ZmenDodaciAdresu();
-});
 
 
 // -----------------------------------------------------------------------------
